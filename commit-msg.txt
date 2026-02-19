@@ -1,0 +1,19 @@
+refactor: overhaul website layout and architecture
+
+This commit represents a complete design and content overhaul of the 
+HanumaDakshita Creators website, inspired by the minimalist and 
+high-impact aesthetic of Aekam.
+
+Key Changes:
+- Replaced Geist font with Poppins for a premium creative agency feel.
+- Updated metadata and unified branding to "HanumaDakshita Creators".
+- Implemented a sticky glassmorphism Navbar with scroll transitions.
+- Refactored 'Services' into a standalone component with cinematic 
+  image-based cards, zoom hover effects, and improved tag contrast.
+- Refactored 'WhyChooseUs' into a separate component with a landscape 
+  aspect ratio (1.8:1) to prevent image cropping.
+- Redesigned the Hero section for bold typographic impact.
+- Updated 'About Us' page content and layout to align with new theme.
+- Improved 'Footer' and global CSS variables for better design consistency.
+- Swapped 'Photography' service asset with the new photography.webp.
+- Added glassmorphism and text-glow utilities to the global style sheet.
