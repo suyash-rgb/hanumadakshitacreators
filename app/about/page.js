@@ -17,7 +17,7 @@ export default function About() {
               <span className="text-primary italic">About</span> Us
             </h1>
             <p className="text-2xl font-medium opacity-60 max-w-2xl mx-auto border-t border-foreground/10 pt-8 mt-8">
-              Dhar's Own Social Media & Creative Agency
+              A Premier Social Media & Creative Agency
             </p>
           </div>
         </div>
@@ -31,7 +31,7 @@ export default function About() {
               <h2 className="text-4xl font-black uppercase tracking-tight text-primary">Our Story</h2>
               <div className="text-2xl font-light leading-[1.6] opacity-80 space-y-6">
                 <p>
-                  At <span className="font-bold text-foreground">Hanumadakshita Creators</span>, we believe every brand has a story worth telling. Based in Dhar, we are a passionate team of creators dedicated to transforming ideas into impactful visuals.
+                  At <span className="font-bold text-foreground">Hanumadakshita Creators</span>, we believe every brand has a story worth telling. We are a passionate team of creators dedicated to transforming ideas into impactful visuals.
                 </p>
                 <p>
                   From eye-catching graphics to high-end reels, our work is designed to help businesses, individuals, and events stand out in the rapidly evolving digital landscape.

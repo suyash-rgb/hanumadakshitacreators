@@ -9,7 +9,7 @@ export default function Footer() {
           <div className="col-span-1 md:col-span-1">
             <h3 className="text-2xl font-black mb-4 tracking-tighter text-primary">HanumaDakshita Creators</h3>
             <p className="text-sm opacity-60 leading-relaxed">
-              Dhar's premier creative media and digital content agency specializing in high-quality visual storytelling.
+              Premier creative media and digital content agency specializing in high-quality visual storytelling.
             </p>
           </div>
 

@@ -23,7 +23,7 @@ export default function WhyChooseUs() {
                         <div className="absolute bottom-12 left-12 right-12">
                             <div className="p-8 glass rounded-3xl">
                                 <h3 className="text-2xl font-black tracking-tight mb-2 text-foreground">Excellence in every frame.</h3>
-                                <p className="text-sm font-semibold opacity-60 text-foreground uppercase tracking-widest">Dhar's #1 Content Agency</p>
+                                <p className="text-sm font-semibold opacity-60 text-foreground uppercase tracking-widest">#1 Content Agency</p>
                             </div>
                         </div>
                     </div>

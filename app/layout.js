@@ -9,7 +9,7 @@ const poppins = Poppins({
 
 export const metadata = {
   title: "Hanumadakshita Creators | Creating Stories • Building Brands",
-  description: "Dhar's premier creative agency specializing in Reels, Photography, Graphic Designing, and Social Media Management.",
+  description: "Premier creative agency specializing in Reels, Photography, Graphic Designing, and Social Media Management.",
 };
 
 export default function RootLayout({ children }) {

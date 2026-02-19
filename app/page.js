@@ -54,7 +54,7 @@ export default function Home() {
                 </div>
                 <p className="text-sm font-semibold opacity-60">
                   Trusted by <span className="text-foreground">50+ Clients</span> <br />
-                  in Dhar and beyond.
+                  across the region and beyond.
                 </p>
               </div>
             </div>
