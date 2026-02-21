@@ -1,6 +1,22 @@
-feat: enhance hero image and services component
+feat: UI/UX enhancements and readability improvements
 
-- Added vertical tag layout option to Services component for better mobile readability.
-- Implemented Social Media Management card with vertical tags.
-- Added orange gradient glow and aura around the hero image.
-- Implemented dynamic zoom effect on hero image that lightens background focus on hover.
+Summary of changes:
+
+1. Responsiveness & Mobile Optimization:
+   - Adjusted hero and section heading font sizes for mobile devices to prevent text overflow.
+   - Refined padding and element scaling in Service cards and the Wedding section for better mobile balance.
+   - Improved tag wrapping in service cards for smaller screens.
+
+2. Services Component Refinement:
+   - Aligned background with the Portfolio section (dark theme).
+   - Added bold black 2px borders and sharp drop-shadows to icon containers for a high-contrast look.
+   - Implemented "verticalTags" layout specifically for Social Media Management to handle long text.
+   - Updated UI elements (buttons, categories) for better visibility on dark backgrounds.
+
+3. Hero Section Visuals:
+   - Added a dynamic orange gradient aura and border glow around the hero logo.
+   - Implemented an interactive zoom-in effect on hover that subtly dims the background glow to focus on the brand.
+
+4. Typography & Readability:
+   - Loosened letter-spacing (from tracking-tighter to tracking-tight) across Footer, Services, and Home page.
+   - This improves the legibility of long brand names and technical terms while maintaining the premium bold aesthetic.

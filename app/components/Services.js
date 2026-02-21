@@ -47,7 +47,7 @@ export default function Services() {
     ];
 
     return (
-        <section id="services" className="py-32 relative overflow-hidden bg-background">
+        <section id="services" className="py-32 relative overflow-hidden bg-foreground text-background">
             {/* Background Orbs */}
             <div className="absolute top-0 left-0 w-full h-full pointer-events-none opacity-10">
                 <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary rounded-full blur-[150px] -mr-64 -mt-64"></div>
@@ -57,18 +57,18 @@ export default function Services() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div className="flex flex-col md:flex-row md:items-end justify-between mb-24 gap-8">
                     <div className="max-w-2xl">
-                        <h2 className="text-5xl sm:text-6xl md:text-8xl font-black tracking-tighter mb-8 leading-[0.85] text-foreground">
+                        <h2 className="text-5xl sm:text-6xl md:text-8xl font-black tracking-tight mb-8 leading-[0.85] text-background">
                             Our <br />
                             <span className="text-primary italic">Services</span>
                         </h2>
-                        <p className="text-xl md:text-2xl font-medium opacity-60 border-l-4 border-primary pl-6 py-2 ml-1 text-foreground">
+                        <p className="text-xl md:text-2xl font-medium opacity-60 border-l-4 border-primary pl-6 py-2 ml-1 text-background">
                             High-quality visual content tailored for <br />
                             your personal brand or business.
                         </p>
                     </div>
                     <div className="flex flex-wrap gap-3">
                         {['All', 'Video', 'Photo', 'Design', 'Social'].map(cat => (
-                            <button key={cat} className="px-6 py-3 rounded-2xl border border-foreground/10 text-sm font-bold hover:bg-primary hover:text-white hover:border-primary transition-all active:scale-95 text-foreground">
+                            <button key={cat} className="px-6 py-3 rounded-2xl border border-background/10 text-sm font-bold hover:bg-primary hover:text-white hover:border-primary transition-all active:scale-95 text-background">
                                 {cat}
                             </button>
                         ))}
@@ -79,7 +79,7 @@ export default function Services() {
                     {services.map((service, index) => (
                         <div
                             key={index}
-                            className="group relative h-[650px] rounded-[60px] overflow-hidden border border-foreground/5 shadow-2xl hover:shadow-[0_50px_100px_-20px_rgba(0,0,0,0.3)] transition-all duration-700"
+                            className="group relative h-[650px] rounded-[60px] overflow-hidden border border-white/10 shadow-2xl hover:shadow-[0_50px_100px_-20px_rgba(0,0,0,0.5)] transition-all duration-700"
                         >
                             {/* Background Image Wrapper */}
                             <div className="absolute inset-0 z-0">
@@ -98,8 +98,8 @@ export default function Services() {
                             {/* Card Content Area */}
                             <div className="relative z-10 h-full p-6 sm:p-10 md:p-14 flex flex-col justify-between">
                                 <div className="flex justify-between items-start">
-                                    <div className={`${service.colorClass} text-white w-16 h-16 sm:w-20 sm:h-20 rounded-2xl sm:rounded-[30px] flex items-center justify-center text-3xl sm:text-4xl shadow-2xl transform -rotate-12 group-hover:rotate-0 transition-transform duration-700`}>
-                                        {service.icon}
+                                    <div className={`${service.colorClass} shadow-[4px_4px_0_0_rgba(0,0,0,1)] border-2 border-black text-white w-16 h-16 sm:w-20 sm:h-20 rounded-2xl sm:rounded-[30px] flex items-center justify-center text-3xl sm:text-4xl transform -rotate-12 group-hover:rotate-0 transition-transform duration-700`}>
+                                        <span className="filter drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">{service.icon}</span>
                                     </div>
                                     <div className="bg-foreground text-background px-3 sm:px-5 py-1 sm:py-2 rounded-full text-[8px] sm:text-[10px] font-black uppercase tracking-[0.2em] shadow-xl">
                                         Top Rated
@@ -107,7 +107,7 @@ export default function Services() {
                                 </div>
 
                                 <div className="space-y-6">
-                                    <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tighter uppercase leading-[0.85] transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                                    <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tight uppercase leading-[0.85] transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                                         {service.title.split(' & ').map((part, i) => (
                                             <span key={i} className="block">
                                                 {part}{i === 0 && service.title.includes('&') ? ' &' : ''}

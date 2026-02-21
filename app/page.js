@@ -19,7 +19,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8 max-w-2xl">
-              <h1 className="text-5xl sm:text-6xl md:text-8xl font-black leading-[0.9] tracking-tighter text-glow">
+              <h1 className="text-5xl sm:text-6xl md:text-8xl font-black leading-[0.9] tracking-tight text-glow">
                 Creating <br />
                 <span className="text-primary">Stories</span> • <br />
                 Building <br />
@@ -85,7 +85,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-4xl md:text-5xl font-black tracking-tighter mb-8 text-primary">About Us</h2>
+              <h2 className="text-4xl md:text-5xl font-black tracking-tight mb-8 text-primary">About Us</h2>
               <div className="space-y-6 text-xl opacity-80 leading-relaxed font-light">
                 <p>
                   <span className="font-bold text-white">HanumaDakshita Creators</span> is a creative media and digital content agency specializing in high-quality visual content and impactful digital storytelling.
@@ -130,7 +130,7 @@ export default function Home() {
               <div className="inline-block px-6 py-2 rounded-full border border-primary/30 text-primary font-bold text-sm tracking-widest uppercase mb-8">
                 Wedding & Event Special 💍✨
               </div>
-              <h2 className="text-4xl sm:text-5xl md:text-7xl font-black tracking-tighter mb-10 leading-[0.9]">
+              <h2 className="text-4xl sm:text-5xl md:text-7xl font-black tracking-tight mb-10 leading-[0.9]">
                 Make your <span className="text-primary italic">special moments</span> unforgettable.
               </h2>
               <p className="text-xl md:text-2xl font-light opacity-60 mb-16 max-w-2xl mx-auto">
@@ -164,7 +164,7 @@ export default function Home() {
       {/* Portfolio Section Placeholder */}
       <section id="portfolio" className="py-32 bg-foreground text-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-5xl md:text-7xl font-black tracking-tighter mb-8 italic">Portfolio</h2>
+          <h2 className="text-5xl md:text-7xl font-black tracking-tight mb-8 italic">Portfolio</h2>
           <p className="text-xl md:text-2xl font-light opacity-60 mb-16 max-w-2xl mx-auto uppercase tracking-[0.2em]">Our Work Speaks for Itself</p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
@@ -192,9 +192,9 @@ export default function Home() {
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <h2 className="text-6xl md:text-9xl font-black tracking-tighter mb-12">Let's <span className="text-primary">Talk</span></h2>
+          <h2 className="text-6xl md:text-9xl font-black tracking-tight mb-12">Let's <span className="text-primary">Talk</span></h2>
 
-          <div className="flex flex-col md:flex-row justify-center items-center gap-12 md:gap-24 mb-20 text-2xl md:text-4xl font-black tracking-tighter uppercase">
+          <div className="flex flex-col md:flex-row justify-center items-center gap-12 md:gap-24 mb-20 text-2xl md:text-4xl font-black tracking-tight uppercase">
             <a href="tel:+916267121751" className="hover:text-primary transition-colors">+91 62671 21751</a>
             <a href="mailto:hanumadakshitacreators@gmail.com" className="hover:text-primary transition-colors">Email Us</a>
             <a href="https://instagram.com/hanumadakshita_creators" className="hover:text-primary transition-colors">Instagram</a>
