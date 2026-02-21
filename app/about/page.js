@@ -40,7 +40,7 @@ export default function About() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-foreground text-background p-12 rounded-[50px] shadow-2xl">
+              <div className="bg-[#0f172a] text-white p-12 rounded-[50px] shadow-2xl">
                 <h3 className="text-3xl font-black mb-6 uppercase tracking-tight text-primary">What Sets Us Apart</h3>
                 <p className="text-lg opacity-80 font-light leading-relaxed">
                   Our commitment to customer satisfaction is what truly defines us. We don't just deliver designs — we craft experiences that resonate with audiences and build lasting impressions.
@@ -66,7 +66,7 @@ export default function About() {
                   { label: 'Events & Weddings', icon: '💍' },
                   { label: 'Established Brands', icon: '🏢' }
                 ].map(item => (
-                  <div key={item.label} className="p-8 glass rounded-[36px] flex flex-col items-center gap-4 text-center group hover:bg-foreground hover:text-background transition-all">
+                  <div key={item.label} className="p-8 glass rounded-[36px] flex flex-col items-center gap-4 text-center group hover:bg-[#0f172a] hover:text-white transition-all">
                     <span className="text-4xl">{item.icon}</span>
                     <span className="text-xs font-black uppercase tracking-widest">{item.label}</span>
                   </div>
@@ -75,7 +75,7 @@ export default function About() {
             </div>
 
             {/* Core Values */}
-            <div className="bg-foreground p-12 md:p-20 rounded-[60px] text-background text-center relative overflow-hidden">
+            <div className="bg-[#0f172a] p-12 md:p-20 rounded-[60px] text-white text-center relative overflow-hidden">
               <div className="absolute inset-0 bg-primary/5 blur-3xl rounded-full scale-150"></div>
               <div className="relative z-10">
                 <h2 className="text-4xl md:text-5xl font-black mb-16 uppercase italic">Our Core Values</h2>

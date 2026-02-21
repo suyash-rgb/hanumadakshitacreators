@@ -1,22 +1,6 @@
-feat: UI/UX enhancements and readability improvements
+style: fix dark mode inversion and improve services responsiveness
 
-Summary of changes:
-
-1. Responsiveness & Mobile Optimization:
-   - Adjusted hero and section heading font sizes for mobile devices to prevent text overflow.
-   - Refined padding and element scaling in Service cards and the Wedding section for better mobile balance.
-   - Improved tag wrapping in service cards for smaller screens.
-
-2. Services Component Refinement:
-   - Aligned background with the Portfolio section (dark theme).
-   - Added bold black 2px borders and sharp drop-shadows to icon containers for a high-contrast look.
-   - Implemented "verticalTags" layout specifically for Social Media Management to handle long text.
-   - Updated UI elements (buttons, categories) for better visibility on dark backgrounds.
-
-3. Hero Section Visuals:
-   - Added a dynamic orange gradient aura and border glow around the hero logo.
-   - Implemented an interactive zoom-in effect on hover that subtly dims the background glow to focus on the brand.
-
-4. Typography & Readability:
-   - Loosened letter-spacing (from tracking-tighter to tracking-tight) across Footer, Services, and Home page.
-   - This improves the legibility of long brand names and technical terms while maintaining the premium bold aesthetic.
+- Force fixed dark backgrounds (#0f172a) and light text for Services, Portfolio, About, and Footer sections to prevent automatic color inversion in dark mode.
+- Update `app/page.js`, `app/about/page.js`, and `app/components/Footer.js` with consistent dark styling.
+- Refactor `app/components/Services.js` tags to be vertical on mobile and horizontal on desktop for better readability.
+- Clean up unused `verticalTags` property in Services data.

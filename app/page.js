@@ -21,7 +21,7 @@ export default function Home() {
             <div className="space-y-8 max-w-2xl">
               <h1 className="text-5xl sm:text-6xl md:text-8xl font-black leading-[0.9] tracking-tight text-glow">
                 Creating <br />
-                <span className="text-primary">Stories</span> • <br />
+                <span className="text-primary">Stories</span> <br />
                 Building <br />
                 <span className="text-secondary text-glow">Brands</span>
               </h1>
@@ -81,7 +81,7 @@ export default function Home() {
       </section>
 
       {/* About Brief */}
-      <section id="about" className="py-24 bg-foreground text-background">
+      <section id="about" className="py-24 bg-[#0f172a] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -121,7 +121,7 @@ export default function Home() {
       {/* Wedding & Event Special */}
       <section className="py-24 bg-gradient-to-b from-transparent to-primary/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-foreground text-background rounded-[60px] p-6 sm:p-12 md:p-24 relative overflow-hidden">
+          <div className="bg-[#0f172a] text-white rounded-[60px] p-6 sm:p-12 md:p-24 relative overflow-hidden">
             <div className="absolute inset-0 opacity-10">
               <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary via-transparent to-transparent"></div>
             </div>
@@ -130,7 +130,7 @@ export default function Home() {
               <div className="inline-block px-6 py-2 rounded-full border border-primary/30 text-primary font-bold text-sm tracking-widest uppercase mb-8">
                 Wedding & Event Special 💍✨
               </div>
-              <h2 className="text-4xl sm:text-5xl md:text-7xl font-black tracking-tight mb-10 leading-[0.9]">
+              <h2 className="text-4xl sm:text-5xl md:text-7xl font-black tracking-tight mb-10 leading-[0.85]">
                 Make your <span className="text-primary italic">special moments</span> unforgettable.
               </h2>
               <p className="text-xl md:text-2xl font-light opacity-60 mb-16 max-w-2xl mx-auto">
@@ -162,7 +162,7 @@ export default function Home() {
       <WhyChooseUs />
 
       {/* Portfolio Section Placeholder */}
-      <section id="portfolio" className="py-32 bg-foreground text-background">
+      <section id="portfolio" className="py-32 bg-[#0f172a] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-5xl md:text-7xl font-black tracking-tight mb-8 italic">Portfolio</h2>
           <p className="text-xl md:text-2xl font-light opacity-60 mb-16 max-w-2xl mx-auto uppercase tracking-[0.2em]">Our Work Speaks for Itself</p>

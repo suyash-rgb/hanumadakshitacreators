@@ -41,13 +41,12 @@ export default function Services() {
             textColor: "text-secondary",
             tags: ["Instagram & FB Handling", "Content Planning", "Caption Writing", "Growth Strategy"],
             link: "https://wa.me/916267121751",
-            cta: "Consult Now",
-            verticalTags: true
+            cta: "Consult Now"
         }
     ];
 
     return (
-        <section id="services" className="py-32 relative overflow-hidden bg-foreground text-background">
+        <section id="services" className="py-32 relative overflow-hidden bg-[#0f172a] text-white">
             {/* Background Orbs */}
             <div className="absolute top-0 left-0 w-full h-full pointer-events-none opacity-10">
                 <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary rounded-full blur-[150px] -mr-64 -mt-64"></div>
@@ -57,18 +56,18 @@ export default function Services() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div className="flex flex-col md:flex-row md:items-end justify-between mb-24 gap-8">
                     <div className="max-w-2xl">
-                        <h2 className="text-5xl sm:text-6xl md:text-8xl font-black tracking-tight mb-8 leading-[0.85] text-background">
+                        <h2 className="text-5xl sm:text-6xl md:text-8xl font-black tracking-tight mb-8 leading-[0.85] text-white">
                             Our <br />
                             <span className="text-primary italic">Services</span>
                         </h2>
-                        <p className="text-xl md:text-2xl font-medium opacity-60 border-l-4 border-primary pl-6 py-2 ml-1 text-background">
+                        <p className="text-xl md:text-2xl font-medium opacity-60 border-l-4 border-primary pl-6 py-2 ml-1 text-white">
                             High-quality visual content tailored for <br />
                             your personal brand or business.
                         </p>
                     </div>
                     <div className="flex flex-wrap gap-3">
                         {['All', 'Video', 'Photo', 'Design', 'Social'].map(cat => (
-                            <button key={cat} className="px-6 py-3 rounded-2xl border border-background/10 text-sm font-bold hover:bg-primary hover:text-white hover:border-primary transition-all active:scale-95 text-background">
+                            <button key={cat} className="px-6 py-3 rounded-2xl border border-white/10 text-sm font-bold hover:bg-primary hover:text-white hover:border-primary transition-all active:scale-95 text-white">
                                 {cat}
                             </button>
                         ))}
@@ -121,7 +120,7 @@ export default function Services() {
                                         </p>
                                     )}
 
-                                    <div className={`flex ${service.verticalTags ? 'flex-col items-start' : 'flex-wrap'} gap-2 pt-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-100`}>
+                                    <div className="flex flex-col md:flex-row md:flex-wrap items-start gap-2 pt-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-100">
                                         {service.tags.map((tag, i) => (
                                             <span
                                                 key={i}
