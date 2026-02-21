@@ -60,14 +60,19 @@ export default function Home() {
             </div>
 
             <div className="relative group">
-              <div className="absolute -inset-4 bg-gradient-to-tr from-primary to-secondary rounded-[40px] opacity-20 blur-3xl group-hover:opacity-30 transition-opacity duration-1000"></div>
-              <div className="relative bg-background rounded-[40px] border border-white/10 overflow-hidden shadow-2xl">
+              {/* Primary Glowing Aura */}
+              <div className="absolute -inset-10 bg-primary/20 rounded-full blur-[100px] group-hover:bg-primary/5 transition-all duration-1000"></div>
+
+              {/* Subtle Gradient Border Glow */}
+              <div className="absolute -inset-1 bg-gradient-to-tr from-primary/30 via-primary/10 to-transparent rounded-[41px] blur-sm opacity-100 group-hover:opacity-40 transition-opacity duration-1000"></div>
+
+              <div className="relative bg-background rounded-[40px] border border-white/5 overflow-hidden shadow-2xl">
                 <Image
                   src="/logo.png"
                   alt="Hanumadakshita Creators"
                   width={600}
                   height={600}
-                  className="object-contain p-8 transform group-hover:scale-105 transition-transform duration-1000"
+                  className="object-contain p-8 transform group-hover:scale-110 transition-transform duration-1000"
                 />
               </div>
             </div>
@@ -83,7 +88,7 @@ export default function Home() {
               <h2 className="text-4xl md:text-5xl font-black tracking-tighter mb-8 text-primary">About Us</h2>
               <div className="space-y-6 text-xl opacity-80 leading-relaxed font-light">
                 <p>
-                  <span className="font-bold text-white">Hanumadakshita Creators</span> is a creative media and digital content agency specializing in high-quality visual content and impactful digital storytelling.
+                  <span className="font-bold text-white">HanumaDakshita Creators</span> is a creative media and digital content agency specializing in high-quality visual content and impactful digital storytelling.
                 </p>
                 <p>
                   We help individuals, businesses, and brands grow their digital presence through professional reels, photography, graphic design, and social media solutions.

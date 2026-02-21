@@ -1,0 +1,6 @@
+feat: enhance hero image and services component
+
+- Added vertical tag layout option to Services component for better mobile readability.
+- Implemented Social Media Management card with vertical tags.
+- Added orange gradient glow and aura around the hero image.
+- Implemented dynamic zoom effect on hero image that lightens background focus on hover.
