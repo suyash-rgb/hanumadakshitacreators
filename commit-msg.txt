@@ -1,19 +1,15 @@
-refactor: overhaul website layout and architecture
+fix: responsiveness issues on mobile view
 
-This commit represents a complete design and content overhaul of the 
-HanumaDakshita Creators website, inspired by the minimalist and 
-high-impact aesthetic of Aekam.
+Key Fixes:
 
-Key Changes:
-- Replaced Geist font with Poppins for a premium creative agency feel.
-- Updated metadata and unified branding to "HanumaDakshita Creators".
-- Implemented a sticky glassmorphism Navbar with scroll transitions.
-- Refactored 'Services' into a standalone component with cinematic 
-  image-based cards, zoom hover effects, and improved tag contrast.
-- Refactored 'WhyChooseUs' into a separate component with a landscape 
-  aspect ratio (1.8:1) to prevent image cropping.
-- Redesigned the Hero section for bold typographic impact.
-- Updated 'About Us' page content and layout to align with new theme.
-- Improved 'Footer' and global CSS variables for better design consistency.
-- Swapped 'Photography' service asset with the new photography.webp.
-- Added glassmorphism and text-glow utilities to the global style sheet.
+1. Fixed "unforgettable" Text Truncation:
+  - Reduced the font size of the heading in the Wedding & Event Special section from text-5xl to text-4xl on mobile devices.
+  - Reduced the internal padding of that section from p-12 to p-6 on mobile to give the long words more horizontal space.
+
+2. Resolved Overlapping in Service Cards:
+  - Padding & Font Sizes: Reduced the card padding and title font sizes on mobile to prevent elements from squeezing each other.
+  - Responsive Tags: Scaled down the service tags (text-[9px] and smaller padding) so they wrap more naturally without overflowing the card boundaries.
+  - Scaled UI Elements: Reduced the size of icons and the "Top Rated" badge on mobile for a more balanced layout.
+
+3. Hero Section Optimization:
+  - Adjusted the main hero heading font size to text-5xl on mobile (down from text-6xl) to ensure "Creating Stories" and other text fits perfectly on narrower screens.

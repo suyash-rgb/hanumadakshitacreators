@@ -56,7 +56,7 @@ export default function Services() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div className="flex flex-col md:flex-row md:items-end justify-between mb-24 gap-8">
                     <div className="max-w-2xl">
-                        <h2 className="text-6xl md:text-8xl font-black tracking-tighter mb-8 leading-[0.85] text-foreground">
+                        <h2 className="text-5xl sm:text-6xl md:text-8xl font-black tracking-tighter mb-8 leading-[0.85] text-foreground">
                             Our <br />
                             <span className="text-primary italic">Services</span>
                         </h2>
@@ -95,18 +95,18 @@ export default function Services() {
                             </div>
 
                             {/* Card Content Area */}
-                            <div className="relative z-10 h-full p-10 md:p-14 flex flex-col justify-between">
+                            <div className="relative z-10 h-full p-6 sm:p-10 md:p-14 flex flex-col justify-between">
                                 <div className="flex justify-between items-start">
-                                    <div className={`${service.colorClass} text-white w-20 h-20 rounded-[30px] flex items-center justify-center text-4xl shadow-2xl transform -rotate-12 group-hover:rotate-0 transition-transform duration-700`}>
+                                    <div className={`${service.colorClass} text-white w-16 h-16 sm:w-20 sm:h-20 rounded-2xl sm:rounded-[30px] flex items-center justify-center text-3xl sm:text-4xl shadow-2xl transform -rotate-12 group-hover:rotate-0 transition-transform duration-700`}>
                                         {service.icon}
                                     </div>
-                                    <div className="bg-foreground text-background px-5 py-2 rounded-full text-[10px] font-black uppercase tracking-[0.2em] shadow-xl">
+                                    <div className="bg-foreground text-background px-3 sm:px-5 py-1 sm:py-2 rounded-full text-[8px] sm:text-[10px] font-black uppercase tracking-[0.2em] shadow-xl">
                                         Top Rated
                                     </div>
                                 </div>
 
                                 <div className="space-y-6">
-                                    <h3 className="text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tighter uppercase leading-[0.85] transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                                    <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tighter uppercase leading-[0.85] transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                                         {service.title.split(' & ').map((part, i) => (
                                             <span key={i} className="block">
                                                 {part}{i === 0 && service.title.includes('&') ? ' &' : ''}
@@ -124,7 +124,7 @@ export default function Services() {
                                         {service.tags.map((tag, i) => (
                                             <span
                                                 key={i}
-                                                className={`px-4 py-1.5 rounded-lg text-[10px] font-black uppercase tracking-widest transition-all duration-300 ${i === 0
+                                                className={`px-3 py-1 sm:px-4 sm:py-1.5 rounded-lg text-[9px] sm:text-[10px] font-black uppercase tracking-widest transition-all duration-300 ${i === 0
                                                     ? `${service.colorClass} text-white shadow-lg`
                                                     : "bg-white/20 text-white backdrop-blur-md border border-white/10 hover:bg-white hover:text-foreground"
                                                     }`}
