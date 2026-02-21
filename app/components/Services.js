@@ -41,7 +41,8 @@ export default function Services() {
             textColor: "text-secondary",
             tags: ["Instagram & FB Handling", "Content Planning", "Caption Writing", "Growth Strategy"],
             link: "https://wa.me/916267121751",
-            cta: "Consult Now"
+            cta: "Consult Now",
+            verticalTags: true
         }
     ];
 
@@ -120,7 +121,7 @@ export default function Services() {
                                         </p>
                                     )}
 
-                                    <div className="flex flex-wrap gap-2 pt-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-100">
+                                    <div className={`flex ${service.verticalTags ? 'flex-col items-start' : 'flex-wrap'} gap-2 pt-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-100`}>
                                         {service.tags.map((tag, i) => (
                                             <span
                                                 key={i}
