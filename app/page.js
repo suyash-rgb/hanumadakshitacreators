@@ -3,6 +3,7 @@ import Footer from './components/Footer';
 import Services from './components/Services';
 import WhyChooseUs from './components/WhyChooseUs';
 import WhatsAppToggle from './components/WhatsAppToggle';
+import Testimonials from './components/Testimonials';
 import Image from 'next/image';
 
 export default function Home() {
@@ -310,8 +311,8 @@ export default function Home() {
             High-impact brand systems, packaging, ads, and event designs that turn visitors into customers.
           </p>
 
-          {/* Interactive Horizontal Cards Showcase */}
-          <div className="mt-16 flex gap-6 overflow-x-auto pb-8 snap-x snap-mandatory scrollbar-thin scrollbar-thumb-white/10 scrollbar-track-transparent px-4">
+          {/* Desktop 4-Column Gallery Grid (No Scrollbars) */}
+          <div className="mt-16 hidden lg:grid grid-cols-4 gap-6 text-left">
             {[
               {
                 category: 'BRANDING',
@@ -348,7 +349,7 @@ export default function Home() {
             ].map((item, index) => (
               <article
                 key={index}
-                className="group relative flex-none w-[280px] sm:w-[320px] aspect-[3/4] rounded-3xl overflow-hidden border border-white/10 bg-white/5 shadow-2xl snap-center transition-all duration-500 hover:border-primary/50 hover:shadow-[0_20px_50px_-15px_rgba(56,189,248,0.3)]"
+                className="group relative w-full aspect-[3/4] rounded-3xl overflow-hidden border border-white/10 bg-white/5 shadow-2xl transition-all duration-500 hover:border-primary/60 hover:-translate-y-1 hover:shadow-[0_20px_50px_-15px_rgba(56,189,248,0.35)]"
               >
                 {/* Background Image with Zoom */}
                 <img
@@ -396,16 +397,110 @@ export default function Home() {
             ))}
           </div>
 
-          {/* Swipe indicator */}
-          <div className="mt-4 flex items-center justify-center gap-2 text-xs text-white/40 uppercase tracking-widest font-mono">
-            <span>←</span> Swipe to Explore <span>→</span>
+          {/* Mobile & Tablet Carousel (Zero Scrollbar) */}
+          <div className="mt-12 lg:hidden flex gap-6 overflow-x-auto pb-6 snap-x snap-mandatory [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden px-4 text-left">
+            {[
+              {
+                category: 'BRANDING',
+                title: 'Signature Logos & Systems',
+                desc: 'Vector assets, palettes & brand guidelines.',
+                img: '/graphicdesigning.jpg',
+                badge: 'Hex Palettes',
+                linkText: 'Build Brand Suite'
+              },
+              {
+                category: 'SOCIAL MEDIA',
+                title: 'Scroll-Stopping Creatives',
+                desc: 'Engagement-driven festival & event posters.',
+                img: '/social-media-management.png',
+                badge: 'Festival Specials',
+                linkText: 'Order Posters'
+              },
+              {
+                category: 'ADVERTISING',
+                title: 'High-CTR Performance Ads',
+                desc: 'Eye-catching digital banners & billboard designs.',
+                img: '/digitaladvertising.jpg',
+                badge: 'Ads & Banners',
+                linkText: 'Get Ad Creative'
+              },
+              {
+                category: 'COMMERCIAL',
+                title: 'Packaging & Merchandise',
+                desc: 'Print-ready vector packaging & physical wraps.',
+                img: '/graphicdesigning.jpg',
+                badge: '300 DPI Vector',
+                linkText: 'Design Packaging'
+              }
+            ].map((item, index) => (
+              <article
+                key={index}
+                className="group relative flex-none w-[280px] sm:w-[320px] aspect-[3/4] rounded-3xl overflow-hidden border border-white/10 bg-white/5 shadow-2xl snap-center transition-all duration-500 hover:border-primary/60"
+              >
+                {/* Background Image with Zoom */}
+                <img
+                  src={item.img}
+                  alt={item.title}
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                
+                {/* Visual Overlays */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent"></div>
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity bg-primary/20"></div>
+
+                {/* Floating Category Tag */}
+                <div className="absolute top-4 left-4 bg-black/40 backdrop-blur-md border border-white/15 px-3 py-1 rounded-full text-[10px] font-bold tracking-wider text-primary uppercase">
+                  {item.category}
+                </div>
+
+                {/* Top Right Spec Badge */}
+                <div className="absolute top-4 right-4 bg-white/10 backdrop-blur-md border border-white/10 px-3 py-1 rounded-full text-[9px] font-medium text-white/90">
+                  {item.badge}
+                </div>
+
+                {/* Bottom Content Frame */}
+                <div className="absolute bottom-6 left-6 right-6 flex flex-col justify-end">
+                  <h3 className="font-heading text-lg sm:text-xl font-bold text-white tracking-tight leading-snug">
+                    {item.title}
+                  </h3>
+                  <p className="mt-2 text-xs sm:text-sm text-white/70 font-sans leading-relaxed">
+                    {item.desc}
+                  </p>
+                  
+                  {/* Hover Actions */}
+                  <div className="mt-4 pt-4 border-t border-white/10 flex items-center justify-between opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                    <a
+                      href={`https://wa.me/916267121751?text=Hi%2C%20I'm%20interested%20in%20your%20${encodeURIComponent(item.category)}%20services!`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xs font-bold text-primary flex items-center gap-1.5 hover:text-white transition-colors"
+                    >
+                      {item.linkText} <span>→</span>
+                    </a>
+                  </div>
+                </div>
+              </article>
+            ))}
           </div>
 
-          {/* Core Badges */}
-          <div className="mt-12 flex flex-wrap items-center justify-center gap-4 sm:gap-8 text-xs font-bold uppercase tracking-wider text-white/50">
-            <span className="flex items-center gap-1.5"><span className="size-1.5 rounded-full bg-primary"></span> Same-Day Delivery</span>
-            <span className="flex items-center gap-1.5"><span className="size-1.5 rounded-full bg-primary"></span> Unlimited Draft Revisions</span>
-            <span className="flex items-center gap-1.5"><span className="size-1.5 rounded-full bg-primary"></span> Print &amp; Web Ready (300 DPI)</span>
+          {/* Elegant Glassmorphism Trust Ribbon */}
+          <div className="mt-14 inline-flex flex-wrap items-center justify-center gap-6 sm:gap-10 px-8 py-4 rounded-full border border-white/10 bg-white/[0.03] backdrop-blur-md shadow-xl text-xs sm:text-sm font-bold uppercase tracking-wider text-white/70">
+            <span className="flex items-center gap-2">
+              <span className="size-2 rounded-full bg-primary shadow-[0_0_8px_rgba(56,189,248,0.8)]"></span>
+              Same-Day Express Delivery
+            </span>
+            <span className="flex items-center gap-2">
+              <span className="size-2 rounded-full bg-primary shadow-[0_0_8px_rgba(56,189,248,0.8)]"></span>
+              100% Vector Built (AI/EPS/PDF)
+            </span>
+            <span className="flex items-center gap-2">
+              <span className="size-2 rounded-full bg-primary shadow-[0_0_8px_rgba(56,189,248,0.8)]"></span>
+              Unlimited Draft Revisions
+            </span>
+            <span className="flex items-center gap-2">
+              <span className="size-2 rounded-full bg-primary shadow-[0_0_8px_rgba(56,189,248,0.8)]"></span>
+              300 DPI Print &amp; 4K Digital
+            </span>
           </div>
         </div>
       </section>
@@ -749,6 +844,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <Testimonials />
 
       <Services />
 
