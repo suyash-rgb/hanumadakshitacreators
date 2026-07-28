@@ -86,54 +86,61 @@ export default function Testimonials() {
           </p>
 
           {/* Interactive Card Deck Container */}
-          <div className="relative h-[380px] sm:h-[420px] max-w-lg mx-auto flex items-center justify-center">
+          <div className="relative h-[380px] sm:h-[440px] w-full max-w-5xl mx-auto flex items-center justify-center overflow-visible">
             {reviews.map((review, idx) => {
-              // Calculate offset from active index
-              const offset = idx - activeIndex;
-              const isActive = idx === activeIndex;
-              const isPrev = idx === (activeIndex === 0 ? reviews.length - 1 : activeIndex - 1);
-              const isNext = idx === (activeIndex === reviews.length - 1 ? 0 : activeIndex + 1);
+              // Calculate relative distance from the active index wrapping around
+              const N = reviews.length;
+              let diff = idx - activeIndex;
+              if (diff > 2) diff -= N;
+              if (diff < -2) diff += N;
 
-              // Determine visibility and fanned styling
+              const isActive = diff === 0;
+
+              // Determine exact positioning and rotation for fanning out
               let transformStyles = "";
               let zIndex = "z-0";
-              let opacity = "opacity-0 pointer-events-none scale-75";
+              let cardTheme = "";
 
-              if (isActive) {
+              if (diff === 0) {
+                // Active Card (Center Focus)
                 transformStyles = "translate-x-0 rotate-0 scale-105";
                 zIndex = "z-30";
-                opacity = "opacity-100 bg-black/85 border-primary/50 text-white shadow-[0_20px_40px_rgba(56,189,248,0.25)]";
-              } else if (isPrev) {
-                transformStyles = "-translate-x-[20%] sm:-translate-x-[35%] -rotate-6 scale-90";
+                cardTheme = "opacity-100 bg-[#081f14] border-primary/50 text-white shadow-[0_20px_50px_rgba(56,189,248,0.3)]";
+              } else if (diff === -1) {
+                // Left Side 1
+                transformStyles = "-translate-x-[50%] sm:-translate-x-[75%] -rotate-[6deg] scale-95";
                 zIndex = "z-20";
-                opacity = "opacity-40 bg-white/5 border-white/10 text-white/50 hover:opacity-60 cursor-pointer";
-              } else if (isNext) {
-                transformStyles = "translate-x-[20%] sm:translate-x-[35%] rotate-6 scale-90";
+                cardTheme = "opacity-90 bg-white border-slate-200 text-slate-800 hover:opacity-100 cursor-pointer shadow-xl";
+              } else if (diff === 1) {
+                // Right Side 1
+                transformStyles = "translate-x-[50%] sm:translate-x-[75%] rotate-[6deg] scale-95";
                 zIndex = "z-20";
-                opacity = "opacity-40 bg-white/5 border-white/10 text-white/50 hover:opacity-60 cursor-pointer";
-              } else if (idx === (activeIndex <= 1 ? reviews.length - 2 + activeIndex : activeIndex - 2)) {
-                transformStyles = "-translate-x-[40%] sm:-translate-x-[60%] -rotate-12 scale-80";
+                cardTheme = "opacity-90 bg-white border-slate-200 text-slate-800 hover:opacity-100 cursor-pointer shadow-xl";
+              } else if (diff === -2) {
+                // Left Side 2 (Outer)
+                transformStyles = "-translate-x-[90%] sm:-translate-x-[140%] -rotate-[12deg] scale-90";
                 zIndex = "z-10";
-                opacity = "opacity-10 bg-white/5 border-white/10 text-white/20";
-              } else {
-                transformStyles = "translate-x-[40%] sm:translate-x-[60%] rotate-12 scale-80";
+                cardTheme = "opacity-60 bg-white/95 border-slate-200 text-slate-800 hover:opacity-80 cursor-pointer shadow-md";
+              } else if (diff === 2) {
+                // Right Side 2 (Outer)
+                transformStyles = "translate-x-[90%] sm:translate-x-[140%] rotate-[12deg] scale-90";
                 zIndex = "z-10";
-                opacity = "opacity-10 bg-white/5 border-white/10 text-white/20";
+                cardTheme = "opacity-60 bg-white/95 border-slate-200 text-slate-800 hover:opacity-80 cursor-pointer shadow-md";
               }
 
               return (
                 <div
                   key={idx}
                   onClick={() => !isActive && setActiveIndex(idx)}
-                  className={`absolute w-[260px] sm:w-[320px] p-6 sm:p-8 rounded-[32px] border transition-all duration-500 ease-out select-none flex flex-col justify-between h-[300px] sm:h-[350px] ${opacity} ${zIndex}`}
+                  className={`absolute w-[240px] sm:w-[300px] p-6 sm:p-8 rounded-[28px] border transition-all duration-500 ease-out select-none flex flex-col justify-between h-[280px] sm:h-[330px] ${cardTheme} ${zIndex}`}
                   style={{
                     transform: transformStyles,
                   }}
                 >
-                  <div>
+                  <div className="text-left">
                     {/* Stars and Avatar */}
-                    <div className="flex items-center justify-between mb-6">
-                      <div className="size-10 rounded-full bg-white/10 flex items-center justify-center text-lg">
+                    <div className="flex items-center justify-between mb-4 sm:mb-6">
+                      <div className={`size-10 rounded-full flex items-center justify-center text-lg ${isActive ? "bg-white/10" : "bg-slate-100"}`}>
                         {review.avatar}
                       </div>
                       <div className="flex gap-0.5 text-primary text-xs">
@@ -144,17 +151,17 @@ export default function Testimonials() {
                     </div>
 
                     {/* Review text */}
-                    <p className="text-sm sm:text-base leading-relaxed italic opacity-90">
+                    <p className="text-xs sm:text-sm md:text-base leading-relaxed italic font-sans font-medium">
                       &ldquo;{review.text}&rdquo;
                     </p>
                   </div>
 
                   {/* Client name and role */}
-                  <div className="border-t border-white/10 pt-4 mt-4">
-                    <h4 className="font-heading font-bold text-sm sm:text-base text-white">
+                  <div className={`border-t pt-4 mt-4 ${isActive ? "border-white/10" : "border-slate-200"}`}>
+                    <h4 className="font-heading font-bold text-xs sm:text-sm">
                       {review.name}
                     </h4>
-                    <p className="text-xs text-white/50 mt-0.5 uppercase tracking-wider font-mono">
+                    <p className={`text-[10px] uppercase tracking-wider font-mono mt-0.5 ${isActive ? "text-white/50" : "text-slate-500"}`}>
                       {review.role}
                     </p>
                   </div>
