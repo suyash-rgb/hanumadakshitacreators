@@ -205,38 +205,87 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About Brief */}
-      <section id="about" className="py-24 bg-transparent text-white">
+      {/* Reelrr-inspired About Section */}
+      <section id="about" className="py-24 bg-transparent text-white relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <h2 className="text-4xl md:text-5xl font-black tracking-tight mb-8 text-primary">About Us</h2>
-              <div className="space-y-6 text-xl opacity-80 leading-relaxed font-light">
-                <p>
-                  <span className="font-bold text-white">HanumaDakshita Creators</span> is a creative media and digital content agency specializing in high-quality visual content and impactful digital storytelling.
-                </p>
-                <p>
-                  We help individuals, businesses, and brands grow their digital presence through professional reels, photography, graphic design, and social media solutions.
-                </p>
-                <p className="italic text-primary font-medium border-l-2 border-primary pl-6">
-                  ✨ Your vision. Our creativity. Real results.
-                </p>
-              </div>
+          {/* Main Headline & Centered Content */}
+          <div className="text-center max-w-4xl mx-auto mb-16">
+            {/* Pill Badge */}
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/10 bg-white/5 text-xs font-bold uppercase tracking-widest text-primary mb-6">
+              <span>✨</span> ABOUT US
             </div>
-            <div className="grid grid-cols-2 gap-4">
-              <div className="bg-white/5 p-8 rounded-3xl border border-white/10 aspect-square flex flex-col justify-end">
-                <span className="text-4xl font-black text-primary mb-2">100+</span>
-                <span className="text-sm uppercase tracking-widest font-bold opacity-40">Projects</span>
-              </div>
-              <div className="bg-primary p-8 rounded-3xl aspect-square flex flex-col justify-end text-white">
-                <span className="text-4xl font-black mb-2">4+</span>
-                <span className="text-sm uppercase tracking-widest font-bold opacity-80">Services</span>
-              </div>
-              <div className="bg-secondary p-8 rounded-3xl aspect-square flex flex-col justify-end text-white col-span-2">
-                <span className="text-4xl font-black mb-2">Instant</span>
-                <span className="text-sm uppercase tracking-widest font-bold opacity-80">Reel Delivery</span>
-              </div>
+
+            <h2 className="font-heading font-bold leading-[1.05] tracking-tight text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
+              <span className="block text-white">HanumaDakshita is built to capture</span>
+              <span className="block bg-gradient-to-r from-cyan-400 via-sky-400 to-blue-500 bg-clip-text text-transparent">
+                moments that matter.
+              </span>
+            </h2>
+
+            <p className="mt-6 font-sans text-base sm:text-lg md:text-xl font-normal text-white/70 max-w-2xl mx-auto leading-relaxed">
+              In a world where everything is content, we focus on turning real-life experiences into memories people actually want to share.
+            </p>
+
+            {/* 2 Buttons Centered */}
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
+              <a
+                href="#portfolio"
+                className="inline-flex items-center gap-2 px-7 py-3 rounded-full border border-primary/50 bg-transparent text-primary hover:bg-primary/10 hover:border-primary font-semibold text-sm sm:text-base transition-all duration-300"
+              >
+                Our Work <span>→</span>
+              </a>
+              <a
+                href="https://wa.me/918878978966?text=Hey%2C%20I%20want%20to%20book%20a%20shoot!"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-7 py-3 rounded-full bg-white/10 border border-white/15 text-white hover:bg-white hover:text-black font-semibold text-sm sm:text-base transition-all duration-300 shadow-lg"
+              >
+                Book Now <span>→</span>
+              </a>
             </div>
+          </div>
+
+          {/* 2 Feature Cards Grid */}
+          <div className="mt-10 grid gap-6 md:grid-cols-2 max-w-4xl mx-auto">
+            {/* Card 1: Experts in capturing moments */}
+            <article className="group rounded-3xl border border-white/10 bg-white/5 p-8 transition-all duration-500 hover:border-primary/40 hover:bg-white/[0.08] hover:-translate-y-1 hover:shadow-[0_20px_40px_-15px_rgba(56,189,248,0.25)] flex flex-col justify-between">
+              <div>
+                <span className="inline-grid size-14 place-items-center rounded-2xl bg-gradient-to-br from-primary to-secondary text-black shadow-[0_10px_30px_-10px_rgba(56,189,248,0.5)] transition-transform duration-500 group-hover:-rotate-6">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-aperture">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="m14.31 8 5.74 9.94"></path>
+                    <path d="M9.69 8h11.48"></path>
+                    <path d="m7.38 12 5.74-9.94"></path>
+                    <path d="M9.69 16 3.95 6.06"></path>
+                    <path d="M14.31 16H2.83"></path>
+                    <path d="m16.62 12-5.74 9.94"></path>
+                  </svg>
+                </span>
+                <h3 className="mt-6 font-heading text-xl md:text-2xl font-semibold tracking-tight text-white">
+                  Experts in capturing moments
+                </h3>
+                <p className="mt-3 text-sm leading-relaxed text-foreground/70 font-sans">
+                  We know what to capture and how to make it feel right. Every creator is trained to shoot moments the way people actually like to watch.
+                </p>
+              </div>
+            </article>
+
+            {/* Card 2: Instant booking, same-day delivery */}
+            <article className="group rounded-3xl border border-white/10 bg-white/5 p-8 transition-all duration-500 hover:border-primary/40 hover:bg-white/[0.08] hover:-translate-y-1 hover:shadow-[0_20px_40px_-15px_rgba(56,189,248,0.25)] flex flex-col justify-between">
+              <div>
+                <span className="inline-grid size-14 place-items-center rounded-2xl bg-gradient-to-br from-primary to-secondary text-black shadow-[0_10px_30px_-10px_rgba(56,189,248,0.5)] transition-transform duration-500 group-hover:-rotate-6">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-zap">
+                    <path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path>
+                  </svg>
+                </span>
+                <h3 className="mt-6 font-heading text-xl md:text-2xl font-semibold tracking-tight text-white">
+                  Instant booking, same-day delivery
+                </h3>
+                <p className="mt-3 text-sm leading-relaxed text-foreground/70 font-sans">
+                  No long waits or back and forth. Book fast, shoot quick, and get your reel the same day.
+                </p>
+              </div>
+            </article>
           </div>
         </div>
       </section>
