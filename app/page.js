@@ -675,8 +675,6 @@ export default function Home() {
 
           {/* 4-Step Process Illustration Pipeline */}
           <div className="mt-16 relative">
-            {/* Connecting Horizontal Line (Desktop) */}
-            <div className="hidden lg:block absolute top-16 left-24 right-24 h-[2px] bg-gradient-to-r from-primary/10 via-primary/50 to-primary/10 z-0"></div>
 
             {/* Icons Row with Glowing Pedestals */}
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 relative z-10 mb-8">
