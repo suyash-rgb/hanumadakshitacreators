@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 export default function About() {
   return (
-    <div className="bg-background text-foreground selection:bg-primary/30 overflow-x-hidden">
+    <div className="bg-transparent text-foreground selection:bg-primary/30 overflow-x-hidden">
       <Navbar />
 
       {/* Hero Section */}

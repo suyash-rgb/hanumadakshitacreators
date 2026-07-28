@@ -22,7 +22,7 @@
 }
 
 body {
-  background: radial-gradient(circle at top left, #6096a6 0%, #12232a 50%, #000000 100%);
+  background: linear-gradient(90deg, #639fae 0%, #3b6b7a 30%, #1f3a44 60%, #0d1a20 80%, #000000 100%);
   background-attachment: fixed;
   color: var(--foreground);
   font-family: var(--font-inter), sans-serif;

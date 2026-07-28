@@ -7,7 +7,7 @@ import Image from 'next/image';
 
 export default function Home() {
   return (
-    <div className="bg-background text-foreground selection:bg-primary/30 selection:text-foreground overflow-x-hidden">
+    <div className="bg-transparent text-foreground selection:bg-primary/30 selection:text-foreground overflow-x-hidden">
       <Navbar />
 
       {/* Reelrr-inspired Hero Section */}
