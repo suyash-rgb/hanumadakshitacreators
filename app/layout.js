@@ -1,5 +1,4 @@
 import { Plus_Jakarta_Sans, Inter } from "next/font/google";
-import Chatbot from "./components/Chatbot";
 import "./globals.css";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
@@ -24,7 +23,6 @@ export default function RootLayout({ children }) {
         className="antialiased font-sans"
       >
         {children}
-        <Chatbot />
       </body>
     </html>
   );

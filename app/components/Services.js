@@ -46,7 +46,7 @@ export default function Services() {
     ];
 
     return (
-        <section id="services" className="py-32 relative overflow-hidden bg-[#0f172a] text-white">
+        <section id="services" className="py-32 relative overflow-hidden bg-transparent text-white">
             {/* Background Orbs */}
             <div className="absolute top-0 left-0 w-full h-full pointer-events-none opacity-10">
                 <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary rounded-full blur-[150px] -mr-64 -mt-64"></div>

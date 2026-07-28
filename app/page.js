@@ -11,7 +11,7 @@ export default function Home() {
       <Navbar />
 
       {/* Reelrr-inspired Hero Section */}
-      <section className="relative w-full overflow-hidden bg-background pt-16 pb-2 text-foreground lg:pt-20 lg:pb-4 xl:pt-24">
+      <section className="relative w-full overflow-hidden bg-transparent pt-16 pb-2 text-foreground lg:pt-20 lg:pb-4 xl:pt-24">
         {/* Glow Effects */}
         <div className="pointer-events-none absolute inset-0 z-0" aria-hidden="true">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_95%_85%_at_30%_52%,rgba(56,189,248,0.12),transparent_70%)]"></div>
@@ -161,9 +161,9 @@ export default function Home() {
         </div>
 
         {/* Double-Crossed Moving Tickers Section (Reelrr style) */}
-        <div className="relative w-full mt-8 h-28 overflow-visible z-20">
+        <div className="relative w-full mt-12 h-32 overflow-visible z-20">
           {/* Ribbon 1: Sky-Blue Ribbon (tilted left, scrolling left) */}
-          <div className="absolute w-[140vw] left-1/2 -translate-x-1/2 py-2 bg-gradient-to-r from-cyan-400 via-sky-400 to-blue-500 text-black -rotate-[2deg] shadow-lg z-10">
+          <div className="absolute w-[140vw] left-1/2 -translate-x-1/2 py-2.5 bg-gradient-to-r from-cyan-400 via-sky-400 to-blue-500 text-black -rotate-[4.5deg] shadow-lg z-10">
             <div className="animate-marquee font-heading font-black uppercase tracking-widest text-[10px] sm:text-xs flex items-center gap-8 whitespace-nowrap">
               {[...Array(3)].map((_, idx) => (
                 <div key={idx} className="flex items-center gap-8">
@@ -184,8 +184,8 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Ribbon 2: White Ribbon (tilted right, scrolling right, overlapping) */}
-          <div className="absolute w-[140vw] left-1/2 -translate-x-1/2 py-2 bg-white text-black rotate-[1.5deg] shadow-md z-0 mt-8">
+          {/* Ribbon 2: White Ribbon (tilted right, scrolling right, overlapping & crossing in the center) */}
+          <div className="absolute w-[140vw] left-1/2 -translate-x-1/2 py-2.5 bg-white text-black rotate-[2.5deg] shadow-md z-20 mt-4">
             <div className="animate-marquee-reverse font-heading font-black uppercase tracking-widest text-[10px] sm:text-xs flex items-center gap-8 whitespace-nowrap">
               {[...Array(3)].map((_, idx) => (
                 <div key={idx} className="flex items-center gap-8">
@@ -209,7 +209,7 @@ export default function Home() {
       </section>
 
       {/* About Brief */}
-      <section id="about" className="py-24 bg-[#0f172a] text-white">
+      <section id="about" className="py-24 bg-transparent text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -249,7 +249,7 @@ export default function Home() {
       {/* Wedding & Event Special */}
       <section className="py-24 bg-gradient-to-b from-transparent to-primary/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-[#0f172a] text-white rounded-[60px] p-6 sm:p-12 md:p-24 relative overflow-hidden">
+          <div className="bg-black/35 backdrop-blur-md border border-white/10 text-white rounded-[60px] p-6 sm:p-12 md:p-24 relative overflow-hidden">
             <div className="absolute inset-0 opacity-10">
               <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary via-transparent to-transparent"></div>
             </div>
@@ -290,7 +290,7 @@ export default function Home() {
       <WhyChooseUs />
 
       {/* Portfolio Section Placeholder */}
-      <section id="portfolio" className="py-32 bg-[#0f172a] text-white">
+      <section id="portfolio" className="py-32 bg-transparent text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-5xl md:text-7xl font-black tracking-tight mb-8 italic">Portfolio</h2>
           <p className="text-xl md:text-2xl font-light opacity-60 mb-16 max-w-2xl mx-auto uppercase tracking-[0.2em]">Our Work Speaks for Itself</p>
