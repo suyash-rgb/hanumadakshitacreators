@@ -11,45 +11,42 @@ export default function Home() {
       <Navbar />
 
       {/* Reelrr-inspired Hero Section */}
-      <section className="relative w-full overflow-hidden bg-background pt-24 pb-8 text-foreground lg:pt-28 xl:pt-32">
+      <section className="relative w-full overflow-hidden bg-background pt-16 pb-2 text-foreground lg:pt-20 lg:pb-4 xl:pt-24">
         {/* Glow Effects */}
         <div className="pointer-events-none absolute inset-0 z-0" aria-hidden="true">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_95%_85%_at_30%_52%,rgba(56,189,248,0.15),transparent_70%)]"></div>
-          <div className="absolute left-[-10%] top-[10%] w-[500px] h-[500px] rounded-full bg-primary/10 blur-[120px]"></div>
-          <div className="absolute right-[-10%] top-[20%] w-[500px] h-[500px] rounded-full bg-secondary/10 blur-[120px]"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_95%_85%_at_30%_52%,rgba(56,189,248,0.12),transparent_70%)]"></div>
+          <div className="absolute left-[-10%] top-[5%] w-[450px] h-[450px] rounded-full bg-primary/8 blur-[100px]"></div>
+          <div className="absolute right-[-10%] top-[10%] w-[450px] h-[450px] rounded-full bg-secondary/8 blur-[100px]"></div>
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-          <div className="flex flex-col items-center justify-between gap-12 lg:flex-row lg:items-start lg:gap-16 xl:gap-20">
+          <div className="flex flex-col items-center justify-between gap-8 lg:flex-row lg:items-start lg:gap-12 xl:gap-16">
             {/* Left Content (Headline, Subtitle, CTAs, Stats) */}
-            <div className="w-full text-left lg:min-w-0 lg:flex-1 lg:pt-6">
+            <div className="w-full text-left lg:min-w-0 lg:flex-1 lg:pt-4">
               {/* Eyebrow / Ticker Text */}
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-primary/20 bg-primary/5 text-primary text-xs font-black uppercase tracking-widest mb-6">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-primary/20 bg-primary/5 text-primary text-xs font-black uppercase tracking-widest mb-4">
                 <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
                 <span>Trained Creators Only</span>
               </div>
 
-              {/* Stacked Heading matching Reelrr */}
-              <h1 className="mt-0 font-heading text-[38px] sm:text-5xl md:text-[68px] lg:text-[76px] xl:text-[84px] font-bold leading-[0.92] tracking-[-0.03em] text-foreground">
-                Your<br />
-                moments<br />
-                deserve<br />
-                a<br />
-                <span className="relative inline-block">
+              {/* Stacked Heading in 2 Lines Only */}
+              <h1 className="mt-0 font-heading text-[34px] sm:text-[44px] md:text-[60px] lg:text-[68px] xl:text-[76px] font-bold leading-[0.92] tracking-[-0.03em] text-foreground">
+                Your moments deserve a<br />
+                <span className="relative inline-block mt-1">
                   <span className="bg-gradient-to-r from-cyan-400 via-sky-400 to-blue-500 bg-clip-text text-transparent drop-shadow-sm font-black">
                     creator.
                   </span>
-                  <span aria-hidden="true" className="absolute inset-x-0 -bottom-2 -z-10 h-3 rounded-full bg-primary/15"></span>
+                  <span aria-hidden="true" className="absolute inset-x-0 -bottom-1 -z-10 h-2.5 rounded-full bg-primary/15"></span>
                 </span>
               </h1>
 
               {/* Subheading */}
-              <p className="mt-6 max-w-xl text-base sm:text-lg leading-relaxed text-foreground/70 font-sans font-medium">
+              <p className="mt-4 max-w-xl text-sm sm:text-base leading-relaxed text-foreground/70 font-sans font-medium">
                 Your moment happens once. We make sure it&apos;s captured right, and before the day ends, it&apos;s already a reel you can share.
               </p>
 
               {/* CTA Buttons */}
-              <div className="mt-8 flex flex-wrap items-center gap-4">
+              <div className="mt-6 flex flex-wrap items-center gap-4">
                 <a
                   href="https://wa.me/916267121751?text=Hey%2C%20I%20don't%20want%20to%20miss%20this%20moment.%20Let's%20book%20a%20shoot."
                   target="_blank"
@@ -78,31 +75,31 @@ export default function Home() {
               </div>
 
               {/* Stats Counters Strip */}
-              <div className="mt-12 flex flex-wrap items-center gap-8 border-t border-white/10 pt-8">
+              <div className="mt-8 flex flex-wrap items-center gap-6 border-t border-white/10 pt-6">
                 <div>
-                  <p className="flex items-center gap-1 font-heading text-3xl md:text-4xl font-bold leading-none tracking-tight">
+                  <p className="flex items-center gap-1 font-heading text-2xl md:text-3xl font-bold leading-none tracking-tight">
                     500<span className="text-primary">+</span>
                   </p>
-                  <p className="mt-1.5 text-[10px] uppercase tracking-widest text-foreground/50 font-bold">
+                  <p className="mt-1 text-[9px] uppercase tracking-widest text-foreground/50 font-bold">
                     Reels Shot
                   </p>
                 </div>
 
                 <div>
-                  <p className="flex items-center gap-1 font-heading text-3xl md:text-4xl font-bold leading-none tracking-tight">
+                  <p className="flex items-center gap-1 font-heading text-2xl md:text-3xl font-bold leading-none tracking-tight">
                     4.9
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="fill-primary text-primary"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
                   </p>
-                  <p className="mt-1.5 text-[10px] uppercase tracking-widest text-foreground/50 font-bold">
+                  <p className="mt-1.5 text-[9px] uppercase tracking-widest text-foreground/50 font-bold">
                     Avg. Rating
                   </p>
                 </div>
 
                 <div>
-                  <p className="flex items-center gap-1 font-heading text-3xl md:text-4xl font-bold leading-none tracking-tight">
+                  <p className="flex items-center gap-1 font-heading text-2xl md:text-3xl font-bold leading-none tracking-tight">
                     10<span className="text-primary">+</span>
                   </p>
-                  <p className="mt-1.5 text-[10px] uppercase tracking-widest text-foreground/50 font-bold">
+                  <p className="mt-1.5 text-[9px] uppercase tracking-widest text-foreground/50 font-bold">
                     Trained Creators
                   </p>
                 </div>
@@ -110,13 +107,13 @@ export default function Home() {
             </div>
 
             {/* Right Content: Vertical Mockup Showcase */}
-            <div className="relative mx-auto mt-4 h-[290px] w-full max-w-[320px] shrink-0 overflow-visible md:h-[350px] md:max-w-[380px] lg:mx-0 lg:mt-6 lg:h-[380px] lg:max-w-[400px]">
+            <div className="relative mx-auto mt-2 h-[260px] w-full max-w-[280px] shrink-0 overflow-visible md:h-[310px] md:max-w-[340px] lg:mx-0 lg:mt-4 lg:h-[340px] lg:max-w-[360px]">
               {/* Blur Aura */}
               <div aria-hidden="true" className="pointer-events-none absolute inset-x-6 bottom-0 top-0 -z-10 rounded-[32px] bg-[radial-gradient(closest-side,var(--color-primary)/18%,transparent_72%)] blur-2xl"></div>
               
               <div className="flex h-full items-end justify-center relative">
                 {/* Left Card: Overlap Decoration Reel */}
-                <div className="absolute left-6 bottom-4 h-[240px] w-[120px] md:h-[290px] md:w-[145px] lg:h-[320px] lg:w-[160px] rounded-[24px] md:rounded-[30px] overflow-hidden -rotate-[14deg] shadow-2xl border border-white/10 z-0 transform hover:rotate-0 hover:scale-105 transition-all duration-700 group">
+                <div className="absolute left-4 bottom-3 h-[220px] w-[110px] md:h-[265px] md:w-[130px] lg:h-[295px] lg:w-[145px] rounded-[20px] md:rounded-[26px] overflow-hidden -rotate-[14deg] shadow-2xl border border-white/10 z-0 transform hover:rotate-0 hover:scale-105 transition-all duration-700 group">
                   <div className="relative w-full h-full bg-zinc-900">
                     <Image
                       src="/digitaladvertising.jpg"
@@ -127,18 +124,18 @@ export default function Home() {
                     {/* Dark gradient overlay */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
                     {/* Simulated mobile screen indicators */}
-                    <div className="absolute top-3 left-1/2 -translate-x-1/2 w-10 h-3 rounded-full bg-black/60 z-20"></div>
+                    <div className="absolute top-2.5 left-1/2 -translate-x-1/2 w-8 h-2 rounded-full bg-black/60 z-20"></div>
                     {/* Interactive Play/Pause button */}
                     <div className="absolute inset-0 z-10 flex items-center justify-center bg-black/25 opacity-100 group-hover:bg-black/40 transition-colors">
-                      <button className="grid size-9 place-items-center rounded-full bg-white/95 text-black shadow-lg">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" className="bi bi-play-fill"><path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/></svg>
+                      <button className="grid size-8 place-items-center rounded-full bg-white/95 text-black shadow-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" className="bi bi-play-fill"><path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/></svg>
                       </button>
                     </div>
                   </div>
                 </div>
 
                 {/* Right Card: Overlap Delivery Reel */}
-                <div className="absolute right-6 bottom-0 h-[240px] w-[120px] md:h-[290px] md:w-[145px] lg:h-[320px] lg:w-[160px] rounded-[24px] md:rounded-[30px] overflow-hidden rotate-[14deg] shadow-2xl border border-white/10 z-10 transform hover:rotate-0 hover:scale-105 transition-all duration-700 group">
+                <div className="absolute right-4 bottom-0 h-[220px] w-[110px] md:h-[265px] md:w-[130px] lg:h-[295px] lg:w-[145px] rounded-[20px] md:rounded-[26px] overflow-hidden rotate-[14deg] shadow-2xl border border-white/10 z-10 transform hover:rotate-0 hover:scale-105 transition-all duration-700 group">
                   <div className="relative w-full h-full bg-zinc-900">
                     <Image
                       src="/photography.webp"
@@ -149,11 +146,11 @@ export default function Home() {
                     {/* Dark gradient overlay */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
                     {/* Simulated mobile screen indicators */}
-                    <div className="absolute top-3 left-1/2 -translate-x-1/2 w-10 h-3 rounded-full bg-black/60 z-20"></div>
+                    <div className="absolute top-2.5 left-1/2 -translate-x-1/2 w-8 h-2 rounded-full bg-black/60 z-20"></div>
                     {/* Interactive Play/Pause button */}
                     <div className="absolute inset-0 z-10 flex items-center justify-center bg-black/25 opacity-100 group-hover:bg-black/40 transition-colors">
-                      <button className="grid size-9 place-items-center rounded-full bg-white/95 text-black shadow-lg">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" className="bi bi-play-fill"><path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/></svg>
+                      <button className="grid size-8 place-items-center rounded-full bg-white/95 text-black shadow-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" className="bi bi-play-fill"><path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/></svg>
                       </button>
                     </div>
                   </div>
@@ -163,25 +160,50 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Ticker / Infinite Marquee Ribbon */}
-        <div className="relative w-full overflow-hidden mt-16 py-3.5 bg-gradient-to-r from-cyan-400 via-sky-400 to-blue-500 text-black -rotate-1 shadow-lg">
-          <div className="animate-marquee font-heading font-black uppercase tracking-widest text-xs sm:text-sm flex items-center gap-8 whitespace-nowrap">
-            {[...Array(3)].map((_, idx) => (
-              <div key={idx} className="flex items-center gap-8">
-                <span>✨ Same-Day Reels Delivery</span>
-                <span>•</span>
-                <span>🎬 Shot on iPhone &amp; 4K Cinema</span>
-                <span>•</span>
-                <span>⚡ Book in Minutes</span>
-                <span>•</span>
-                <span>🚀 Always Ready to Shoot</span>
-                <span>•</span>
-                <span>🔥 Ready Before Your Event Ends</span>
-                <span>•</span>
-                <span>💎 Trained Creators Only</span>
-                <span>•</span>
-              </div>
-            ))}
+        {/* Double-Crossed Moving Tickers Section (Reelrr style) */}
+        <div className="relative w-full mt-8 h-28 overflow-visible z-20">
+          {/* Ribbon 1: Sky-Blue Ribbon (tilted left, scrolling left) */}
+          <div className="absolute w-[140vw] left-1/2 -translate-x-1/2 py-2 bg-gradient-to-r from-cyan-400 via-sky-400 to-blue-500 text-black -rotate-[2deg] shadow-lg z-10">
+            <div className="animate-marquee font-heading font-black uppercase tracking-widest text-[10px] sm:text-xs flex items-center gap-8 whitespace-nowrap">
+              {[...Array(3)].map((_, idx) => (
+                <div key={idx} className="flex items-center gap-8">
+                  <span>✨ Same-Day Reels Delivery</span>
+                  <span>•</span>
+                  <span>🎬 Shot on iPhone &amp; 4K Cinema</span>
+                  <span>•</span>
+                  <span>⚡ Book in Minutes</span>
+                  <span>•</span>
+                  <span>🚀 Always Ready to Shoot</span>
+                  <span>•</span>
+                  <span>🔥 Ready Before Your Event Ends</span>
+                  <span>•</span>
+                  <span>💎 Trained Creators Only</span>
+                  <span>•</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Ribbon 2: White Ribbon (tilted right, scrolling right, overlapping) */}
+          <div className="absolute w-[140vw] left-1/2 -translate-x-1/2 py-2 bg-white text-black rotate-[1.5deg] shadow-md z-0 mt-8">
+            <div className="animate-marquee-reverse font-heading font-black uppercase tracking-widest text-[10px] sm:text-xs flex items-center gap-8 whitespace-nowrap">
+              {[...Array(3)].map((_, idx) => (
+                <div key={idx} className="flex items-center gap-8">
+                  <span>💎 Trained Creators Only</span>
+                  <span>•</span>
+                  <span>🔥 Ready Before Your Event Ends</span>
+                  <span>•</span>
+                  <span>🚀 Always Ready to Shoot</span>
+                  <span>•</span>
+                  <span>⚡ Book in Minutes</span>
+                  <span>•</span>
+                  <span>🎬 Shot on iPhone &amp; 4K Cinema</span>
+                  <span>•</span>
+                  <span>✨ Same-Day Reels Delivery</span>
+                  <span>•</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
