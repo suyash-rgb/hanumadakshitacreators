@@ -25,27 +25,6 @@ export default function Footer() {
       )
     },
     {
-      name: "Pinterest",
-      url: "https://pinterest.com",
-      icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-          <line x1="12" y1="8" x2="12" y2="16"></line>
-          <line x1="8" y1="12" x2="16" y2="12"></line>
-          <circle cx="12" cy="12" r="10"></circle>
-        </svg>
-      )
-    },
-    {
-      name: "YouTube",
-      url: "https://youtube.com",
-      icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
-          <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
-        </svg>
-      )
-    },
-    {
       name: "WhatsApp",
       url: "https://wa.me/916267121751",
       icon: (
@@ -57,7 +36,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-[#031d10] text-white py-24 relative overflow-hidden z-10 border-t border-white/5">
+    <footer className="bg-slate-950 text-white py-24 relative overflow-hidden z-10 border-t border-white/10">
       {/* Background Watermark */}
       <div className="absolute inset-0 flex items-center justify-center opacity-[0.02] pointer-events-none select-none overflow-hidden z-0">
         <span className="text-white text-8xl md:text-[180px] font-black tracking-tight font-heading uppercase">
@@ -68,7 +47,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         {/* Logo */}
         <div className="flex justify-center mb-6">
-          <div className="relative w-44 sm:w-56 h-12">
+          <div className="relative w-56 sm:w-72 h-16 transition-transform duration-500 hover:scale-105">
             <Image
               src="/textlogo.png"
               alt="HanumaDakshita Creators Logo"
@@ -94,10 +73,10 @@ export default function Footer() {
               href={link.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-4 bg-white text-[#031d10] pl-5 pr-2 py-2 rounded-full font-bold text-xs sm:text-sm shadow-xl transition-all duration-300 hover:scale-105 hover:bg-slate-100 group"
+              className="inline-flex items-center gap-4 bg-white text-slate-950 pl-5 pr-2 py-2 rounded-full font-bold text-xs sm:text-sm shadow-xl transition-all duration-300 hover:scale-105 hover:bg-slate-100 group"
             >
               <span>{link.name}</span>
-              <div className="size-8 rounded-full bg-[#031d10] text-white flex items-center justify-center transition-transform duration-300 group-hover:scale-95">
+              <div className="size-8 rounded-full bg-slate-950 text-white flex items-center justify-center transition-transform duration-300 group-hover:scale-95">
                 {link.icon}
               </div>
             </a>
