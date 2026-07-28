@@ -54,18 +54,20 @@ export default function Testimonials() {
   return (
     <>
       <style>{`
-        @keyframes float-slow {
-          0%, 100% { transform: translateY(0px) scale(1); }
-          50% { transform: translateY(-8px) scale(1.01); }
+        @keyframes marquee-left {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
         }
-        @keyframes float-medium {
-          0%, 100% { transform: translateY(0px) scale(1); }
-          50% { transform: translateY(-12px) scale(0.99); }
+        @keyframes marquee-right {
+          0% { transform: translateX(-50%); }
+          100% { transform: translateX(0); }
         }
-        .animate-float-1 { animation: float-slow 6s ease-in-out infinite; }
-        .animate-float-2 { animation: float-medium 7s ease-in-out infinite 0.5s; }
-        .animate-float-3 { animation: float-slow 8s ease-in-out infinite 1s; }
-        .animate-float-4 { animation: float-medium 5s ease-in-out infinite 1.5s; }
+        .animate-marquee-left {
+          animation: marquee-left 40s linear infinite;
+        }
+        .animate-marquee-right {
+          animation: marquee-right 40s linear infinite;
+        }
       `}</style>
 
       {/* -------------------------------------------------------------
@@ -222,7 +224,7 @@ export default function Testimonials() {
       </section>
 
       {/* -------------------------------------------------------------
-          OPTION 2: Floating Motion Dialogue Clouds
+          OPTION 2: Live Scrolling Dialogue Clouds (Lively, High-Motion Marquee)
           ------------------------------------------------------------- */}
       <section id="testimonials-clouds" className="py-24 bg-transparent text-white relative z-10 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -235,69 +237,97 @@ export default function Testimonials() {
             Real-time client reactions
           </h2>
           <p className="text-base sm:text-lg text-white/60 max-w-xl mx-auto mb-16">
-            Interactive, floating speech bubbles reflecting genuine project feedback.
+            Lively, self-scrolling dialogue clouds highlighting stellar reviews. Hover to pause and read.
           </p>
+        </div>
 
-          {/* Dialogue Cloud Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto text-left relative min-h-[360px]">
-            {/* Cloud 1 */}
-            <div className="animate-float-1 group relative bg-black/40 border border-white/10 p-6 rounded-3xl shadow-[0_0_20px_rgba(56,189,248,0.05)] hover:border-primary/50 hover:shadow-[0_0_25px_rgba(56,189,248,0.15)] transition-all duration-300">
-              {/* Dialogue Bubble tail */}
-              <div className="absolute -bottom-2.5 left-8 w-5 h-5 bg-black/40 border-r border-b border-white/10 rotate-45 group-hover:border-primary/50 transition-colors"></div>
+        {/* Outer Scrolling Container */}
+        <div className="flex flex-col gap-8 w-full overflow-hidden relative">
+          {/* Row 1: Scrolling Left */}
+          <div className="relative w-full flex items-center">
+            <div className="animate-marquee-left flex gap-6 hover:[animation-play-state:paused] pointer-events-auto">
+              {[...reviews, ...reviews].map((review, idx) => (
+                <div
+                  key={`row1-${idx}`}
+                  className="group relative w-[320px] sm:w-[420px] p-8 rounded-[32px] border border-white/10 bg-white/[0.04] backdrop-blur-md transition-all duration-300 hover:border-primary/50 hover:bg-white/[0.08] hover:shadow-[0_20px_50px_rgba(56,189,248,0.2)] flex flex-col justify-between min-h-[220px]"
+                >
+                  {/* Dialogue Bubble tail */}
+                  <div className="absolute -bottom-2.5 left-8 w-5 h-5 bg-black/40 border-r border-b border-white/10 rotate-45 group-hover:border-primary/50 transition-colors"></div>
 
-              <div className="flex gap-0.5 text-primary text-xs mb-3">★ ★ ★ ★ ★</div>
-              <p className="text-sm leading-relaxed text-white/90 italic">
-                &ldquo;Absolutely stunned by the logo delivery. Took only 12 hours to deliver vector files! 🙌&rdquo;
-              </p>
-              <div className="mt-4 pt-3 border-t border-white/5 flex items-center justify-between text-xs">
-                <span className="font-bold text-white">Vikram Rathore</span>
-                <span className="text-white/40 uppercase tracking-widest font-mono text-[9px]">Branding</span>
-              </div>
+                  <div className="text-left">
+                    {/* Stars and Category */}
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="flex gap-0.5 text-primary text-xs">
+                        {Array.from({ length: review.stars }).map((_, i) => (
+                          <span key={i}>★</span>
+                        ))}
+                      </div>
+                      <span className="text-[10px] text-white/40 uppercase tracking-widest font-mono">
+                        {review.role}
+                      </span>
+                    </div>
+
+                    {/* Review text (Large & bold) */}
+                    <p className="text-base sm:text-lg md:text-xl font-bold tracking-tight text-white/95 leading-snug italic font-sans">
+                      &ldquo;{review.text}&rdquo;
+                    </p>
+                  </div>
+
+                  {/* Client name and Avatar */}
+                  <div className="border-t border-white/5 pt-4 mt-6 flex items-center justify-between">
+                    <span className="font-heading font-bold text-sm text-white/80">
+                      {review.name}
+                    </span>
+                    <span className="text-sm bg-white/10 w-8 h-8 rounded-full flex items-center justify-center">
+                      {review.avatar}
+                    </span>
+                  </div>
+                </div>
+              ))}
             </div>
+          </div>
 
-            {/* Cloud 2 */}
-            <div className="animate-float-2 group relative bg-black/40 border border-white/10 p-6 rounded-3xl shadow-[0_0_20px_rgba(56,189,248,0.05)] hover:border-primary/50 hover:shadow-[0_0_25px_rgba(56,189,248,0.15)] transition-all duration-300 mt-6 md:mt-0">
-              {/* Dialogue Bubble tail */}
-              <div className="absolute -bottom-2.5 left-8 w-5 h-5 bg-black/40 border-r border-b border-white/10 rotate-45 group-hover:border-primary/50 transition-colors"></div>
+          {/* Row 2: Scrolling Right */}
+          <div className="relative w-full flex items-center">
+            <div className="animate-marquee-right flex gap-6 hover:[animation-play-state:paused] pointer-events-auto">
+              {[...reviews, ...reviews].reverse().map((review, idx) => (
+                <div
+                  key={`row2-${idx}`}
+                  className="group relative w-[320px] sm:w-[420px] p-8 rounded-[32px] border border-white/10 bg-white/[0.04] backdrop-blur-md transition-all duration-300 hover:border-primary/50 hover:bg-white/[0.08] hover:shadow-[0_20px_50px_rgba(56,189,248,0.2)] flex flex-col justify-between min-h-[220px]"
+                >
+                  {/* Dialogue Bubble tail */}
+                  <div className="absolute -bottom-2.5 left-8 w-5 h-5 bg-black/40 border-r border-b border-white/10 rotate-45 group-hover:border-primary/50 transition-colors"></div>
 
-              <div className="flex gap-0.5 text-primary text-xs mb-3">★ ★ ★ ★ ★</div>
-              <p className="text-sm leading-relaxed text-white/90 italic">
-                &ldquo;Our Instagram campaign creatives look so premium. Our CTR rose from 1.5% to 4.2%! 🚀&rdquo;
-              </p>
-              <div className="mt-4 pt-3 border-t border-white/5 flex items-center justify-between text-xs">
-                <span className="font-bold text-white">Sneha Mehra</span>
-                <span className="text-white/40 uppercase tracking-widest font-mono text-[9px]">Instagram Ads</span>
-              </div>
-            </div>
+                  <div className="text-left">
+                    {/* Stars and Category */}
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="flex gap-0.5 text-primary text-xs">
+                        {Array.from({ length: review.stars }).map((_, i) => (
+                          <span key={i}>★</span>
+                        ))}
+                      </div>
+                      <span className="text-[10px] text-white/40 uppercase tracking-widest font-mono">
+                        {review.role}
+                      </span>
+                    </div>
 
-            {/* Cloud 3 */}
-            <div className="animate-float-3 group relative bg-black/40 border border-white/10 p-6 rounded-3xl shadow-[0_0_20px_rgba(56,189,248,0.05)] hover:border-primary/50 hover:shadow-[0_0_25px_rgba(56,189,248,0.15)] transition-all duration-300 mt-6 lg:mt-0">
-              {/* Dialogue Bubble tail */}
-              <div className="absolute -bottom-2.5 left-8 w-5 h-5 bg-black/40 border-r border-b border-white/10 rotate-45 group-hover:border-primary/50 transition-colors"></div>
+                    {/* Review text (Large & bold) */}
+                    <p className="text-base sm:text-lg md:text-xl font-bold tracking-tight text-white/95 leading-snug italic font-sans">
+                      &ldquo;{review.text}&rdquo;
+                    </p>
+                  </div>
 
-              <div className="flex gap-0.5 text-primary text-xs mb-3">★ ★ ★ ★ ★</div>
-              <p className="text-sm leading-relaxed text-white/90 italic">
-                &ldquo;The wedding reel hit 210k views overnight! Highly recommend their video crew.&rdquo;
-              </p>
-              <div className="mt-4 pt-3 border-t border-white/5 flex items-center justify-between text-xs">
-                <span className="font-bold text-white">Atul Sahdup</span>
-                <span className="text-white/40 uppercase tracking-widest font-mono text-[9px]">Event Reel</span>
-              </div>
-            </div>
-
-            {/* Cloud 4 */}
-            <div className="animate-float-4 group relative bg-black/40 border border-white/10 p-6 rounded-3xl shadow-[0_0_20px_rgba(56,189,248,0.05)] hover:border-primary/50 hover:shadow-[0_0_25px_rgba(56,189,248,0.15)] transition-all duration-300 mt-6 lg:mt-0">
-              {/* Dialogue Bubble tail */}
-              <div className="absolute -bottom-2.5 left-8 w-5 h-5 bg-black/40 border-r border-b border-white/10 rotate-45 group-hover:border-primary/50 transition-colors"></div>
-
-              <div className="flex gap-0.5 text-primary text-xs mb-3">★ ★ ★ ★ ★</div>
-              <p className="text-sm leading-relaxed text-white/90 italic">
-                &ldquo;Quick, easy booking. Their creator showed up on time and delivered the reel same day.&rdquo;
-              </p>
-              <div className="mt-4 pt-3 border-t border-white/5 flex items-center justify-between text-xs">
-                <span className="font-bold text-white">Rahul Jain</span>
-                <span className="text-white/40 uppercase tracking-widest font-mono text-[9px]">Shoot Service</span>
-              </div>
+                  {/* Client name and Avatar */}
+                  <div className="border-t border-white/5 pt-4 mt-6 flex items-center justify-between">
+                    <span className="font-heading font-bold text-sm text-white/80">
+                      {review.name}
+                    </span>
+                    <span className="text-sm bg-white/10 w-8 h-8 rounded-full flex items-center justify-center">
+                      {review.avatar}
+                    </span>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
