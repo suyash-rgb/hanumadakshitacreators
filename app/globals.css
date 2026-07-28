@@ -22,10 +22,12 @@
 }
 
 body {
-  background: var(--background);
+  background: radial-gradient(circle at top left, #6096a6 0%, #12232a 50%, #000000 100%);
+  background-attachment: fixed;
   color: var(--foreground);
   font-family: var(--font-inter), sans-serif;
   scroll-behavior: smooth;
+  min-height: 100vh;
 }
 
 @layer utilities {
