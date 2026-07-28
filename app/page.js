@@ -10,72 +10,174 @@ export default function Home() {
     <div className="bg-background text-foreground selection:bg-primary/30 selection:text-foreground overflow-x-hidden">
       <Navbar />
 
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden">
+      {/* Reelrr-Style Hero Section */}
+      <section className="relative min-h-screen flex flex-col justify-center pt-28 pb-12 overflow-hidden">
         {/* Background Accents */}
-        <div className="absolute top-0 right-0 w-1/2 h-screen bg-secondary/5 rounded-full blur-[120px] -mr-1/4 -mt-1/4 animate-pulse"></div>
-        <div className="absolute bottom-0 left-0 w-1/3 h-1/2 bg-primary/5 rounded-full blur-[100px] -ml-1/6 -mb-1/6 animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-0 right-0 w-1/2 h-screen bg-secondary/5 rounded-full blur-[140px] -mr-1/4 -mt-1/4 animate-pulse"></div>
+        <div
+          className="absolute bottom-0 left-0 w-1/3 h-1/2 bg-primary/10 rounded-full blur-[120px] -ml-1/6 -mb-1/6 animate-pulse"
+          style={{ animationDelay: '1s' }}
+        ></div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="space-y-8 max-w-2xl">
-              <h1 className="text-5xl sm:text-6xl md:text-8xl font-black leading-[0.9] tracking-tight text-glow">
-                Creating <br />
-                <span className="text-primary">Stories</span> <br />
-                Building <br />
-                <span className="text-secondary text-glow">Brands</span>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full mb-16">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+            {/* Left Column: Speed Hook & Copy */}
+            <div className="lg:col-span-7 space-y-8">
+              {/* Eyebrow Badge */}
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-primary/10 text-primary text-xs sm:text-sm font-bold tracking-wide uppercase">
+                <span>✨ Instant &amp; Same-Day Reel Delivery</span>
+                <span className="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>
+              </div>
+
+              {/* Reelrr-Inspired Main Headline */}
+              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black leading-[0.92] tracking-tight">
+                Your moments <br />
+                deserve a <br />
+                <span className="text-primary italic">Reel &amp; Story.</span>
               </h1>
 
-              <p className="text-xl md:text-2xl font-medium leading-relaxed opacity-80 border-l-4 border-primary pl-6 py-2">
-                We transform your moments and ideas into powerful digital stories that connect, engage, and leave a lasting impact.
+              <p className="text-lg sm:text-xl md:text-2xl font-medium leading-relaxed opacity-80 border-l-4 border-primary pl-6 py-1 max-w-2xl">
+                Your moment happens once. We make sure it&apos;s captured right,
+                edited professionally, and delivered the same day—ready to share
+                with the world.
               </p>
 
-              <div className="flex flex-wrap gap-4 pt-4">
+              {/* CTA Buttons */}
+              <div className="flex flex-wrap items-center gap-4 pt-2">
                 <a
-                  href="https://wa.me/916267121751"
-                  className="bg-primary text-white px-10 py-5 rounded-2xl font-bold text-lg hover:shadow-[0_20px_40px_-10px_rgba(249,115,22,0.4)] transition-all active:scale-95 flex items-center gap-3"
+                  href="https://wa.me/916267121751?text=Hi%20HanumaDakshita%20Creators%2C%20I'd%20like%20to%20book%20a%20reels%20shoot!"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group relative inline-flex items-center gap-3 bg-primary text-white px-8 py-4 rounded-full font-bold text-base sm:text-lg hover:shadow-[0_20px_50px_-10px_rgba(249,115,22,0.6)] transition-all active:scale-95"
                 >
-                  Get a Quote
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+                  <span>Book Now</span>
+                  <span className="inline-flex items-center justify-center rounded-full bg-white/20 p-1.5 transition-transform duration-500 group-hover:rotate-45">
+                    <svg
+                      className="w-4 h-4"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2.5}
+                        d="M7 7h10v10M7 17L17 7"
+                      />
+                    </svg>
+                  </span>
                 </a>
+
                 <a
                   href="#portfolio"
-                  className="bg-foreground text-background px-10 py-5 rounded-2xl font-bold text-lg hover:bg-foreground/90 transition-all flex items-center gap-3"
+                  className="group inline-flex items-center gap-3 border-2 border-foreground/15 hover:border-primary/50 text-foreground px-8 py-4 rounded-full font-bold text-base sm:text-lg transition-all hover:bg-primary/5"
                 >
-                  View Portfolio
+                  <span>Our Work</span>
+                  <span className="inline-flex items-center justify-center rounded-full bg-primary/10 text-primary p-1.5 transition-transform duration-500 group-hover:rotate-45">
+                    <svg
+                      className="w-4 h-4"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2.5}
+                        d="M7 7h10v10M7 17L17 7"
+                      />
+                    </svg>
+                  </span>
                 </a>
               </div>
 
-              <div className="pt-8 flex items-center gap-6">
-                <div className="flex -space-x-3">
-                  {[1, 2, 3, 4].map(i => (
-                    <div key={i} className="w-12 h-12 rounded-full border-4 border-background bg-secondary/20 flex items-center justify-center text-xs font-bold">HD</div>
-                  ))}
+              {/* Social Proof Strip matching Reelrr */}
+              <div className="pt-6 border-t border-foreground/10 grid grid-cols-3 gap-4 max-w-lg">
+                <div>
+                  <div className="text-2xl sm:text-3xl font-black text-foreground flex items-center gap-1">
+                    100<span className="text-primary">+</span>
+                  </div>
+                  <div className="text-[11px] uppercase tracking-widest font-bold opacity-60">
+                    Reels Shot
+                  </div>
                 </div>
-                <p className="text-sm font-semibold opacity-60">
-                  Trusted by <span className="text-foreground">50+ Clients</span> <br />
-                  across the region and beyond.
-                </p>
+                <div>
+                  <div className="text-2xl sm:text-3xl font-black text-foreground flex items-center gap-1">
+                    5.0
+                    <span className="text-primary">★</span>
+                  </div>
+                  <div className="text-[11px] uppercase tracking-widest font-bold opacity-60">
+                    Avg. Rating
+                  </div>
+                </div>
+                <div>
+                  <div className="text-2xl sm:text-3xl font-black text-foreground flex items-center gap-1">
+                    4<span className="text-secondary">+</span>
+                  </div>
+                  <div className="text-[11px] uppercase tracking-widest font-bold opacity-60">
+                    Core Services
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div className="relative group">
+            {/* Right Column: Dynamic Visual Showcase */}
+            <div className="lg:col-span-5 relative group mt-8 lg:mt-0">
               {/* Primary Glowing Aura */}
-              <div className="absolute -inset-10 bg-primary/20 rounded-full blur-[100px] group-hover:bg-primary/5 transition-all duration-1000"></div>
+              <div className="absolute -inset-10 bg-gradient-to-tr from-primary/30 via-secondary/20 to-transparent rounded-full blur-[90px] group-hover:scale-105 transition-all duration-1000"></div>
 
-              {/* Subtle Gradient Border Glow */}
-              <div className="absolute -inset-1 bg-gradient-to-tr from-primary/30 via-primary/10 to-transparent rounded-[41px] blur-sm opacity-100 group-hover:opacity-40 transition-opacity duration-1000"></div>
+              <div className="relative">
+                {/* Floating Speed Badge (Top Left) */}
+                <div className="absolute -top-4 -left-4 sm:-top-6 sm:-left-6 z-20 glass px-4 py-2.5 rounded-2xl shadow-xl border border-white/20 flex items-center gap-2 animate-bounce" style={{ animationDuration: '3s' }}>
+                  <span className="text-primary font-black text-lg">⚡</span>
+                  <span className="text-xs sm:text-sm font-bold tracking-tight">
+                    Same-Day Delivery
+                  </span>
+                </div>
 
-              <div className="relative bg-background rounded-[40px] border border-white/5 overflow-hidden shadow-2xl">
-                <Image
-                  src="/logo.png"
-                  alt="Hanumadakshita Creators"
-                  width={600}
-                  height={600}
-                  className="object-contain p-8 transform group-hover:scale-110 transition-transform duration-1000"
-                />
+                {/* Main Visual Box */}
+                <div className="relative bg-background/80 backdrop-blur-md rounded-[48px] border border-white/10 overflow-hidden shadow-2xl p-8 sm:p-12 transform group-hover:scale-[1.02] transition-transform duration-700">
+                  <Image
+                    src="/logo.png"
+                    alt="HanumaDakshita Creators"
+                    width={500}
+                    height={500}
+                    className="object-contain w-full h-auto transform group-hover:scale-105 transition-transform duration-1000"
+                    priority
+                  />
+                </div>
+
+                {/* Floating Quality Badge (Bottom Right) */}
+                <div className="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 z-20 bg-foreground text-background px-5 py-3 rounded-2xl shadow-2xl flex items-center gap-2.5">
+                  <span className="w-2.5 h-2.5 rounded-full bg-primary"></span>
+                  <span className="text-xs sm:text-sm font-black tracking-tight uppercase">
+                    Shot on iPhone &amp; 4K
+                  </span>
+                </div>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* Angled Infinite Marquee Ticker Ribbon (Reelrr Style) */}
+        <div className="relative w-full overflow-hidden mt-12 py-3.5 bg-gradient-to-r from-primary via-orange-500 to-secondary text-white -rotate-1 shadow-lg">
+          <div className="animate-marquee font-black uppercase tracking-widest text-xs sm:text-sm flex items-center gap-8 whitespace-nowrap">
+            {[...Array(3)].map((_, idx) => (
+              <div key={idx} className="flex items-center gap-8">
+                <span>✨ Same-Day Reels Delivery</span>
+                <span>•</span>
+                <span>🎬 Shot on iPhone &amp; 4K Cinema</span>
+                <span>•</span>
+                <span>⚡ Book in Minutes</span>
+                <span>•</span>
+                <span>🚀 Always Ready to Shoot</span>
+                <span>•</span>
+                <span>🔥 Ready Before Your Event Ends</span>
+                <span>•</span>
+                <span>💎 Trained Creators Only</span>
+                <span>•</span>
+              </div>
+            ))}
           </div>
         </div>
       </section>
