@@ -1,10 +1,15 @@
-import { Poppins } from "next/font/google";
+import { Plus_Jakarta_Sans, Inter } from "next/font/google";
+import Chatbot from "./components/Chatbot";
 import "./globals.css";
 
-const poppins = Poppins({
-  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
-  variable: "--font-poppins",
+const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
+  variable: "--font-plus-jakarta-sans",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
 });
 
 export const metadata = {
@@ -14,11 +19,12 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${plusJakartaSans.variable} ${inter.variable}`}>
       <body
-        className={`${poppins.variable} antialiased font-sans`}
+        className="antialiased font-sans"
       >
         {children}
+        <Chatbot />
       </body>
     </html>
   );

@@ -10,158 +10,162 @@ export default function Home() {
     <div className="bg-background text-foreground selection:bg-primary/30 selection:text-foreground overflow-x-hidden">
       <Navbar />
 
-      {/* Reelrr-Style Hero Section */}
-      <section className="relative min-h-screen flex flex-col justify-center pt-28 pb-12 overflow-hidden">
-        {/* Background Accents */}
-        <div className="absolute top-0 right-0 w-1/2 h-screen bg-secondary/5 rounded-full blur-[140px] -mr-1/4 -mt-1/4 animate-pulse"></div>
-        <div
-          className="absolute bottom-0 left-0 w-1/3 h-1/2 bg-primary/10 rounded-full blur-[120px] -ml-1/6 -mb-1/6 animate-pulse"
-          style={{ animationDelay: '1s' }}
-        ></div>
+      {/* Reelrr-inspired Hero Section */}
+      <section className="relative w-full overflow-hidden bg-background pt-24 pb-8 text-foreground lg:pt-28 xl:pt-32">
+        {/* Glow Effects */}
+        <div className="pointer-events-none absolute inset-0 z-0" aria-hidden="true">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_95%_85%_at_30%_52%,rgba(56,189,248,0.15),transparent_70%)]"></div>
+          <div className="absolute left-[-10%] top-[10%] w-[500px] h-[500px] rounded-full bg-primary/10 blur-[120px]"></div>
+          <div className="absolute right-[-10%] top-[20%] w-[500px] h-[500px] rounded-full bg-secondary/10 blur-[120px]"></div>
+        </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full mb-16">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-            {/* Left Column: Speed Hook & Copy */}
-            <div className="lg:col-span-7 space-y-8">
-              {/* Eyebrow Badge */}
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-primary/10 text-primary text-xs sm:text-sm font-bold tracking-wide uppercase">
-                <span>✨ Instant &amp; Same-Day Reel Delivery</span>
-                <span className="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+          <div className="flex flex-col items-center justify-between gap-12 lg:flex-row lg:items-start lg:gap-16 xl:gap-20">
+            {/* Left Content (Headline, Subtitle, CTAs, Stats) */}
+            <div className="w-full text-left lg:min-w-0 lg:flex-1 lg:pt-6">
+              {/* Eyebrow / Ticker Text */}
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-primary/20 bg-primary/5 text-primary text-xs font-black uppercase tracking-widest mb-6">
+                <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                <span>Trained Creators Only</span>
               </div>
 
-              {/* Reelrr-Inspired Main Headline */}
-              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black leading-[0.92] tracking-tight">
-                Your moments <br />
-                deserve a <br />
-                <span className="text-primary italic">Reel &amp; Story.</span>
+              {/* Stacked Heading matching Reelrr */}
+              <h1 className="mt-0 font-heading text-[38px] sm:text-5xl md:text-[68px] lg:text-[76px] xl:text-[84px] font-bold leading-[0.92] tracking-[-0.03em] text-foreground">
+                Your<br />
+                moments<br />
+                deserve<br />
+                a<br />
+                <span className="relative inline-block">
+                  <span className="bg-gradient-to-r from-cyan-400 via-sky-400 to-blue-500 bg-clip-text text-transparent drop-shadow-sm font-black">
+                    creator.
+                  </span>
+                  <span aria-hidden="true" className="absolute inset-x-0 -bottom-2 -z-10 h-3 rounded-full bg-primary/15"></span>
+                </span>
               </h1>
 
-              <p className="text-lg sm:text-xl md:text-2xl font-medium leading-relaxed opacity-80 border-l-4 border-primary pl-6 py-1 max-w-2xl">
-                Your moment happens once. We make sure it&apos;s captured right,
-                edited professionally, and delivered the same day—ready to share
-                with the world.
+              {/* Subheading */}
+              <p className="mt-6 max-w-xl text-base sm:text-lg leading-relaxed text-foreground/70 font-sans font-medium">
+                Your moment happens once. We make sure it&apos;s captured right, and before the day ends, it&apos;s already a reel you can share.
               </p>
 
               {/* CTA Buttons */}
-              <div className="flex flex-wrap items-center gap-4 pt-2">
+              <div className="mt-8 flex flex-wrap items-center gap-4">
                 <a
-                  href="https://wa.me/916267121751?text=Hi%20HanumaDakshita%20Creators%2C%20I'd%20like%20to%20book%20a%20reels%20shoot!"
+                  href="https://wa.me/916267121751?text=Hey%2C%20I%20don't%20want%20to%20miss%20this%20moment.%20Let's%20book%20a%20shoot."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group relative inline-flex items-center gap-3 bg-primary text-white px-8 py-4 rounded-full font-bold text-base sm:text-lg hover:shadow-[0_20px_50px_-10px_rgba(249,115,22,0.6)] transition-all active:scale-95"
+                  className="group relative inline-flex items-center gap-2 rounded-full px-6 py-4 text-sm font-semibold tracking-tight transition-all duration-300 bg-primary text-black hover:shadow-[0_20px_60px_-15px_rgba(56,189,248,0.55)] active:scale-95"
                 >
-                  <span>Book Now</span>
-                  <span className="inline-flex items-center justify-center rounded-full bg-white/20 p-1.5 transition-transform duration-500 group-hover:rotate-45">
-                    <svg
-                      className="w-4 h-4"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2.5}
-                        d="M7 7h10v10M7 17L17 7"
-                      />
-                    </svg>
+                  <span className="relative z-10 inline-flex items-center gap-2">
+                    <span>Book Now</span>
+                    <span className="inline-flex items-center justify-center rounded-full p-1 transition-transform duration-500 group-hover:rotate-45 bg-black text-primary">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="size-3.5"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg>
+                    </span>
                   </span>
                 </a>
 
                 <a
+                  className="group relative inline-flex items-center gap-2 rounded-full px-6 py-4 text-sm font-semibold tracking-tight transition-all duration-300 border border-primary/30 bg-transparent text-primary hover:bg-primary/10"
                   href="#portfolio"
-                  className="group inline-flex items-center gap-3 border-2 border-foreground/15 hover:border-primary/50 text-foreground px-8 py-4 rounded-full font-bold text-base sm:text-lg transition-all hover:bg-primary/5"
                 >
-                  <span>Our Work</span>
-                  <span className="inline-flex items-center justify-center rounded-full bg-primary/10 text-primary p-1.5 transition-transform duration-500 group-hover:rotate-45">
-                    <svg
-                      className="w-4 h-4"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2.5}
-                        d="M7 7h10v10M7 17L17 7"
-                      />
-                    </svg>
+                  <span className="relative z-10 inline-flex items-center gap-2">
+                    <span>Our Work</span>
+                    <span className="inline-flex items-center justify-center rounded-full p-1 transition-transform duration-500 group-hover:rotate-45 bg-primary text-black">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="size-3.5"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg>
+                    </span>
                   </span>
                 </a>
               </div>
 
-              {/* Social Proof Strip matching Reelrr */}
-              <div className="pt-6 border-t border-foreground/10 grid grid-cols-3 gap-4 max-w-lg">
+              {/* Stats Counters Strip */}
+              <div className="mt-12 flex flex-wrap items-center gap-8 border-t border-white/10 pt-8">
                 <div>
-                  <div className="text-2xl sm:text-3xl font-black text-foreground flex items-center gap-1">
-                    100<span className="text-primary">+</span>
-                  </div>
-                  <div className="text-[11px] uppercase tracking-widest font-bold opacity-60">
+                  <p className="flex items-center gap-1 font-heading text-3xl md:text-4xl font-bold leading-none tracking-tight">
+                    500<span className="text-primary">+</span>
+                  </p>
+                  <p className="mt-1.5 text-[10px] uppercase tracking-widest text-foreground/50 font-bold">
                     Reels Shot
-                  </div>
+                  </p>
                 </div>
+
                 <div>
-                  <div className="text-2xl sm:text-3xl font-black text-foreground flex items-center gap-1">
-                    5.0
-                    <span className="text-primary">★</span>
-                  </div>
-                  <div className="text-[11px] uppercase tracking-widest font-bold opacity-60">
+                  <p className="flex items-center gap-1 font-heading text-3xl md:text-4xl font-bold leading-none tracking-tight">
+                    4.9
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="fill-primary text-primary"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  </p>
+                  <p className="mt-1.5 text-[10px] uppercase tracking-widest text-foreground/50 font-bold">
                     Avg. Rating
-                  </div>
+                  </p>
                 </div>
+
                 <div>
-                  <div className="text-2xl sm:text-3xl font-black text-foreground flex items-center gap-1">
-                    4<span className="text-secondary">+</span>
-                  </div>
-                  <div className="text-[11px] uppercase tracking-widest font-bold opacity-60">
-                    Core Services
-                  </div>
+                  <p className="flex items-center gap-1 font-heading text-3xl md:text-4xl font-bold leading-none tracking-tight">
+                    10<span className="text-primary">+</span>
+                  </p>
+                  <p className="mt-1.5 text-[10px] uppercase tracking-widest text-foreground/50 font-bold">
+                    Trained Creators
+                  </p>
                 </div>
               </div>
             </div>
 
-            {/* Right Column: Dynamic Visual Showcase */}
-            <div className="lg:col-span-5 relative group mt-8 lg:mt-0">
-              {/* Primary Glowing Aura */}
-              <div className="absolute -inset-10 bg-gradient-to-tr from-primary/30 via-secondary/20 to-transparent rounded-full blur-[90px] group-hover:scale-105 transition-all duration-1000"></div>
-
-              <div className="relative">
-                {/* Floating Speed Badge (Top Left) */}
-                <div className="absolute -top-4 -left-4 sm:-top-6 sm:-left-6 z-20 glass px-4 py-2.5 rounded-2xl shadow-xl border border-white/20 flex items-center gap-2 animate-bounce" style={{ animationDuration: '3s' }}>
-                  <span className="text-primary font-black text-lg">⚡</span>
-                  <span className="text-xs sm:text-sm font-bold tracking-tight">
-                    Same-Day Delivery
-                  </span>
+            {/* Right Content: Vertical Mockup Showcase */}
+            <div className="relative mx-auto mt-4 h-[290px] w-full max-w-[320px] shrink-0 overflow-visible md:h-[350px] md:max-w-[380px] lg:mx-0 lg:mt-6 lg:h-[380px] lg:max-w-[400px]">
+              {/* Blur Aura */}
+              <div aria-hidden="true" className="pointer-events-none absolute inset-x-6 bottom-0 top-0 -z-10 rounded-[32px] bg-[radial-gradient(closest-side,var(--color-primary)/18%,transparent_72%)] blur-2xl"></div>
+              
+              <div className="flex h-full items-end justify-center relative">
+                {/* Left Card: Overlap Decoration Reel */}
+                <div className="absolute left-6 bottom-4 h-[240px] w-[120px] md:h-[290px] md:w-[145px] lg:h-[320px] lg:w-[160px] rounded-[24px] md:rounded-[30px] overflow-hidden -rotate-[14deg] shadow-2xl border border-white/10 z-0 transform hover:rotate-0 hover:scale-105 transition-all duration-700 group">
+                  <div className="relative w-full h-full bg-zinc-900">
+                    <Image
+                      src="/digitaladvertising.jpg"
+                      alt="Event Reel Preview"
+                      fill
+                      className="object-cover opacity-80"
+                    />
+                    {/* Dark gradient overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+                    {/* Simulated mobile screen indicators */}
+                    <div className="absolute top-3 left-1/2 -translate-x-1/2 w-10 h-3 rounded-full bg-black/60 z-20"></div>
+                    {/* Interactive Play/Pause button */}
+                    <div className="absolute inset-0 z-10 flex items-center justify-center bg-black/25 opacity-100 group-hover:bg-black/40 transition-colors">
+                      <button className="grid size-9 place-items-center rounded-full bg-white/95 text-black shadow-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" className="bi bi-play-fill"><path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/></svg>
+                      </button>
+                    </div>
+                  </div>
                 </div>
 
-                {/* Main Visual Box */}
-                <div className="relative bg-background/80 backdrop-blur-md rounded-[48px] border border-white/10 overflow-hidden shadow-2xl p-8 sm:p-12 transform group-hover:scale-[1.02] transition-transform duration-700">
-                  <Image
-                    src="/logo.png"
-                    alt="HanumaDakshita Creators"
-                    width={500}
-                    height={500}
-                    className="object-contain w-full h-auto transform group-hover:scale-105 transition-transform duration-1000"
-                    priority
-                  />
-                </div>
-
-                {/* Floating Quality Badge (Bottom Right) */}
-                <div className="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 z-20 bg-foreground text-background px-5 py-3 rounded-2xl shadow-2xl flex items-center gap-2.5">
-                  <span className="w-2.5 h-2.5 rounded-full bg-primary"></span>
-                  <span className="text-xs sm:text-sm font-black tracking-tight uppercase">
-                    Shot on iPhone &amp; 4K
-                  </span>
+                {/* Right Card: Overlap Delivery Reel */}
+                <div className="absolute right-6 bottom-0 h-[240px] w-[120px] md:h-[290px] md:w-[145px] lg:h-[320px] lg:w-[160px] rounded-[24px] md:rounded-[30px] overflow-hidden rotate-[14deg] shadow-2xl border border-white/10 z-10 transform hover:rotate-0 hover:scale-105 transition-all duration-700 group">
+                  <div className="relative w-full h-full bg-zinc-900">
+                    <Image
+                      src="/photography.webp"
+                      alt="Car Delivery Reel Preview"
+                      fill
+                      className="object-cover opacity-80"
+                    />
+                    {/* Dark gradient overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+                    {/* Simulated mobile screen indicators */}
+                    <div className="absolute top-3 left-1/2 -translate-x-1/2 w-10 h-3 rounded-full bg-black/60 z-20"></div>
+                    {/* Interactive Play/Pause button */}
+                    <div className="absolute inset-0 z-10 flex items-center justify-center bg-black/25 opacity-100 group-hover:bg-black/40 transition-colors">
+                      <button className="grid size-9 place-items-center rounded-full bg-white/95 text-black shadow-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" className="bi bi-play-fill"><path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/></svg>
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Angled Infinite Marquee Ticker Ribbon (Reelrr Style) */}
-        <div className="relative w-full overflow-hidden mt-12 py-3.5 bg-gradient-to-r from-primary via-orange-500 to-secondary text-white -rotate-1 shadow-lg">
-          <div className="animate-marquee font-black uppercase tracking-widest text-xs sm:text-sm flex items-center gap-8 whitespace-nowrap">
+        {/* Ticker / Infinite Marquee Ribbon */}
+        <div className="relative w-full overflow-hidden mt-16 py-3.5 bg-gradient-to-r from-cyan-400 via-sky-400 to-blue-500 text-black -rotate-1 shadow-lg">
+          <div className="animate-marquee font-heading font-black uppercase tracking-widest text-xs sm:text-sm flex items-center gap-8 whitespace-nowrap">
             {[...Array(3)].map((_, idx) => (
               <div key={idx} className="flex items-center gap-8">
                 <span>✨ Same-Day Reels Delivery</span>
