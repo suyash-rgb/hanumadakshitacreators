@@ -109,10 +109,10 @@ export default function Footer() {
             &copy; {currentYear} HanumaDakshita. Your stories deserve the best.
           </div>
 
-          {/* Credits */}
+          {/* Credits
           <div className="font-semibold text-white opacity-90">
-            Designed by <span className="text-white hover:text-primary transition-colors cursor-pointer">Codevibe</span>
-          </div>
+            Designed by <span className="text-white hover:text-primary transition-colors cursor-pointer">suyash-rgb</span>
+          </div> */}
         </div>
       </div>
     </footer>

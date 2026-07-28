@@ -1,6 +1,0 @@
-style: fix dark mode inversion and improve services responsiveness
-
-- Force fixed dark backgrounds (#0f172a) and light text for Services, Portfolio, About, and Footer sections to prevent automatic color inversion in dark mode.
-- Update `app/page.js`, `app/about/page.js`, and `app/components/Footer.js` with consistent dark styling.
-- Refactor `app/components/Services.js` tags to be vertical on mobile and horizontal on desktop for better readability.
-- Clean up unused `verticalTags` property in Services data.
