@@ -4,6 +4,7 @@ import Services from './components/Services';
 import WhyChooseUs from './components/WhyChooseUs';
 import WhatsAppToggle from './components/WhatsAppToggle';
 import Testimonials from './components/Testimonials';
+import Faq from './components/Faq';
 import Image from 'next/image';
 
 export default function Home() {
@@ -357,7 +358,7 @@ export default function Home() {
                   alt={item.title}
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
-                
+
                 {/* Visual Overlays */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent"></div>
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity bg-primary/20"></div>
@@ -380,7 +381,7 @@ export default function Home() {
                   <p className="mt-2 text-xs sm:text-sm text-white/70 font-sans leading-relaxed">
                     {item.desc}
                   </p>
-                  
+
                   {/* Hover Actions */}
                   <div className="mt-4 pt-4 border-t border-white/10 flex items-center justify-between opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                     <a
@@ -443,7 +444,7 @@ export default function Home() {
                   alt={item.title}
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
-                
+
                 {/* Visual Overlays */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent"></div>
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity bg-primary/20"></div>
@@ -466,7 +467,7 @@ export default function Home() {
                   <p className="mt-2 text-xs sm:text-sm text-white/70 font-sans leading-relaxed">
                     {item.desc}
                   </p>
-                  
+
                   {/* Hover Actions */}
                   <div className="mt-4 pt-4 border-t border-white/10 flex items-center justify-between opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                     <a
@@ -847,50 +848,9 @@ export default function Home() {
 
       <Testimonials />
 
-      <Services />
-
-      {/* Wedding & Event Special */}
-      <section className="py-24 bg-gradient-to-b from-transparent to-primary/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-black/35 backdrop-blur-md border border-white/10 text-white rounded-[60px] p-6 sm:p-12 md:p-24 relative overflow-hidden">
-            <div className="absolute inset-0 opacity-10">
-              <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary via-transparent to-transparent"></div>
-            </div>
-
-            <div className="relative z-10 max-w-4xl mx-auto text-center">
-              <div className="inline-block px-6 py-2 rounded-full border border-primary/30 text-primary font-bold text-sm tracking-widest uppercase mb-8">
-                Wedding & Event Special 💍✨
-              </div>
-              <h2 className="text-4xl sm:text-5xl md:text-7xl font-black tracking-tight mb-10 leading-[0.85]">
-                Make your <span className="text-primary italic">special moments</span> unforgettable.
-              </h2>
-              <p className="text-xl md:text-2xl font-light opacity-60 mb-16 max-w-2xl mx-auto">
-                We provide instant reels, cinematic coverage, and professional editing so your memories live forever.
-              </p>
-
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
-                {[
-                  { icon: '✔', label: 'Same-Day Reels' },
-                  { icon: '✔', label: 'Cinematic Coverage' },
-                  { icon: '✔', label: 'High-Quality' },
-                  { icon: '✔', label: 'On-Time' }
-                ].map(item => (
-                  <div key={item.label} className="p-6 rounded-3xl bg-white/5 border border-white/10 flex flex-col items-center gap-4 group hover:bg-white transition-all hover:text-foreground">
-                    <span className="text-primary text-2xl font-black">{item.icon}</span>
-                    <span className="text-xs uppercase font-black tracking-widest text-center">{item.label}</span>
-                  </div>
-                ))}
-              </div>
-
-              <a href="https://wa.me/916267121751" className="inline-flex bg-primary text-white px-12 py-6 rounded-3xl font-black text-xl hover:scale-105 transition-all shadow-xl">
-                Book for My Event
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <WhyChooseUs />
+
+      <Faq />
 
       {/* Contact Section */}
       <section id="contact" className="py-32 overflow-hidden relative">
@@ -898,21 +858,7 @@ export default function Home() {
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary rounded-full blur-[160px]"></div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <h2 className="text-6xl md:text-9xl font-black tracking-tight mb-12">Let's <span className="text-primary">Talk</span></h2>
 
-          <div className="flex flex-col md:flex-row justify-center items-center gap-12 md:gap-24 mb-20 text-2xl md:text-4xl font-black tracking-tight uppercase">
-            <a href="tel:+916267121751" className="hover:text-primary transition-colors">+91 62671 21751</a>
-            <a href="mailto:hanumadakshitacreators@gmail.com" className="hover:text-primary transition-colors">Email Us</a>
-            <a href="https://instagram.com/hanumadakshita_creators" className="hover:text-primary transition-colors">Instagram</a>
-          </div>
-
-          <div className="p-2 glass rounded-[40px] inline-block">
-            <a href="https://wa.me/916267121751" className="flex items-center gap-4 bg-primary text-white px-16 py-8 rounded-[36px] font-black text-2xl hover:bg-primary/90 transition-all shadow-2xl">
-              Start A Project
-            </a>
-          </div>
-        </div>
       </section>
 
       <Footer />
