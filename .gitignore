@@ -39,3 +39,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# unused images
+/public/logo.png
+/public/textlogo 02.png
+/public/bg gradient.png
+*.psd
+*.ai

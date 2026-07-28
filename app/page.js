@@ -290,6 +290,346 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Reelrr-inspired Our Work Section (Immediately below About Us) */}
+      <section id="portfolio" className="py-24 bg-transparent text-white relative z-10 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          {/* Pill Badge */}
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/10 bg-white/5 text-xs font-bold uppercase tracking-widest text-primary mb-6">
+            <span>✨</span> OUR WORK
+          </div>
+
+          {/* Stacked Heading */}
+          <h2 className="font-heading font-bold leading-[1.05] tracking-tight text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
+            <span className="block text-white">Where moments</span>
+            <span className="block bg-gradient-to-r from-cyan-400 via-sky-400 to-blue-500 bg-clip-text text-transparent">
+              become reels
+            </span>
+          </h2>
+
+          <p className="mt-4 font-sans text-base sm:text-lg md:text-xl font-normal text-white/70 max-w-2xl mx-auto leading-relaxed">
+            A sample of what we&apos;ve shipped recently
+          </p>
+
+          {/* Fanned-out 9:16 Reels Cards Showcase (Desktop) */}
+          <div className="mt-16 hidden md:flex justify-center items-center -space-x-6 lg:-space-x-10 py-12 px-4">
+            {[
+              {
+                title: 'Wedding Celebration',
+                views: '124K views',
+                img: '/photography.webp',
+                rotate: '-rotate-12 translate-y-8',
+                badge: 'Wedding Reel',
+              },
+              {
+                title: 'Brand Launch',
+                views: '85K views',
+                img: '/digitaladvertising.jpg',
+                rotate: '-rotate-6 translate-y-3',
+                badge: 'Brand Shoot',
+              },
+              {
+                title: 'Grand Event',
+                views: '210K views',
+                img: '/photography.webp',
+                rotate: 'rotate-0 z-10 scale-105 shadow-[0_25px_60px_-15px_rgba(56,189,248,0.35)] border-primary/50',
+                badge: 'Featured Reel',
+              },
+              {
+                title: 'Product Campaign',
+                views: '95K views',
+                img: '/graphicdesigning.jpg',
+                rotate: 'rotate-6 translate-y-3',
+                badge: 'Commercial',
+              },
+              {
+                title: 'Celebrity Feature',
+                views: '150K views',
+                img: '/digitaladvertising.jpg',
+                rotate: 'rotate-12 translate-y-8',
+                badge: 'Event Reel',
+              },
+            ].map((item, index) => (
+              <div
+                key={index}
+                className={`group relative w-56 lg:w-64 aspect-[9/16] rounded-[32px] overflow-hidden border border-white/15 bg-white/5 shadow-2xl transition-all duration-500 hover:rotate-0 hover:translate-y-0 hover:scale-110 hover:z-30 hover:border-primary/80 hover:shadow-[0_20px_50px_-10px_rgba(56,189,248,0.5)] ${item.rotate}`}
+              >
+                {/* Background Image with Overlay */}
+                <img
+                  src={item.img}
+                  alt={item.title}
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+
+                {/* Top Right Brand Badge */}
+                <div className="absolute top-4 right-4 bg-black/40 backdrop-blur-md border border-white/20 px-3 py-1 rounded-full text-[11px] font-bold tracking-wider text-white uppercase">
+                  {item.badge}
+                </div>
+
+                {/* Center Play Button Icon on Hover */}
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="size-14 rounded-full bg-white/20 backdrop-blur-md border border-white/40 flex items-center justify-center text-white transition-transform duration-500 group-hover:scale-125 group-hover:bg-primary group-hover:text-black group-hover:border-primary shadow-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" className="ml-1">
+                      <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                    </svg>
+                  </div>
+                </div>
+
+                {/* Bottom Content */}
+                <div className="absolute bottom-5 left-5 right-5 text-left">
+                  <h3 className="font-heading text-lg font-bold text-white tracking-tight leading-snug">
+                    {item.title}
+                  </h3>
+                  <div className="mt-1 flex items-center gap-2 text-xs text-white/80 font-medium">
+                    <span className="inline-block size-2 rounded-full bg-primary animate-pulse"></span>
+                    <span>{item.views}</span>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Mobile Carousel / Grid (Mobile Only) */}
+          <div className="mt-12 md:hidden flex gap-4 overflow-x-auto pb-8 snap-x px-4">
+            {[
+              { title: 'Wedding Celebration', views: '124K views', img: '/photography.webp', badge: 'Wedding Reel' },
+              { title: 'Grand Event', views: '210K views', img: '/photography.webp', badge: 'Featured Reel' },
+              { title: 'Brand Launch', views: '85K views', img: '/digitaladvertising.jpg', badge: 'Brand Shoot' },
+            ].map((item, index) => (
+              <div
+                key={index}
+                className="group relative flex-none w-64 aspect-[9/16] rounded-3xl overflow-hidden border border-white/15 bg-white/5 shadow-xl snap-center"
+              >
+                <img src={item.img} alt={item.title} className="absolute inset-0 w-full h-full object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+
+                <div className="absolute top-4 right-4 bg-black/40 backdrop-blur-md border border-white/20 px-3 py-1 rounded-full text-[11px] font-bold text-white uppercase">
+                  {item.badge}
+                </div>
+
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="size-12 rounded-full bg-white/20 backdrop-blur-md border border-white/40 flex items-center justify-center text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className="ml-1">
+                      <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                    </svg>
+                  </div>
+                </div>
+
+                <div className="absolute bottom-5 left-5 right-5 text-left">
+                  <h3 className="font-heading text-lg font-bold text-white tracking-tight leading-snug">
+                    {item.title}
+                  </h3>
+                  <div className="mt-1 flex items-center gap-2 text-xs text-white/80 font-medium">
+                    <span className="inline-block size-2 rounded-full bg-primary"></span>
+                    <span>{item.views}</span>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Call To Action Footer below the cards */}
+          <div className="mt-8 border-t border-white/10 pt-12">
+            <p className="text-sm font-bold uppercase tracking-widest text-white/60">
+              📩 Contact us on WhatsApp to view our complete reels &amp; video library
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Reelrr-inspired How It Works Section */}
+      <section id="process" className="py-24 bg-transparent text-white relative z-10 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          {/* Pill Badge */}
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/10 bg-white/5 text-xs font-bold uppercase tracking-widest text-primary mb-6">
+            <span>✨</span> HOW IT WORKS
+          </div>
+
+          {/* Stacked Heading */}
+          <h2 className="font-heading font-bold leading-[1.05] tracking-tight text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
+            <span className="block text-white">Simple steps.</span>
+            <span className="block bg-gradient-to-r from-cyan-400 via-sky-400 to-blue-500 bg-clip-text text-transparent">
+              Epic reels.
+            </span>
+          </h2>
+
+          <p className="mt-4 font-sans text-base sm:text-lg md:text-xl font-normal text-white/70 max-w-2xl mx-auto leading-relaxed">
+            From booking to posting, we make the process smooth, fast, and hassle-free.
+          </p>
+
+          {/* 4-Step Process Illustration Pipeline */}
+          <div className="mt-16 relative">
+            {/* Connecting Horizontal Line (Desktop) */}
+            <div className="hidden lg:block absolute top-16 left-24 right-24 h-[2px] bg-gradient-to-r from-primary/10 via-primary/50 to-primary/10 z-0"></div>
+
+            {/* Icons Row with Glowing Pedestals */}
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 relative z-10 mb-8">
+              {/* Step 1 Icon: Calendar */}
+              <div className="flex flex-col items-center">
+                <div className="size-28 rounded-3xl bg-gradient-to-br from-white/10 to-white/5 border border-white/20 p-5 flex items-center justify-center shadow-2xl transition-transform duration-500 hover:-translate-y-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="text-primary">
+                    <rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect>
+                    <line x1="16" x2="16" y1="2" y2="6"></line>
+                    <line x1="8" x2="8" y1="2" y2="6"></line>
+                    <line x1="3" x2="21" y1="10" y2="10"></line>
+                    <path d="m9 16 2 2 4-4"></path>
+                  </svg>
+                </div>
+                {/* Glowing Pedestal */}
+                <div className="w-24 h-2.5 bg-primary/40 blur-md rounded-full mt-3"></div>
+              </div>
+
+              {/* Step 2 Icon: Creator */}
+              <div className="flex flex-col items-center">
+                <div className="size-28 rounded-3xl bg-gradient-to-br from-white/10 to-white/5 border border-white/20 p-5 flex items-center justify-center shadow-2xl transition-transform duration-500 hover:-translate-y-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="text-sky-400">
+                    <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                  </svg>
+                </div>
+                {/* Glowing Pedestal */}
+                <div className="w-24 h-2.5 bg-sky-400/40 blur-md rounded-full mt-3"></div>
+              </div>
+
+              {/* Step 3 Icon: Clapperboard */}
+              <div className="flex flex-col items-center">
+                <div className="size-28 rounded-3xl bg-gradient-to-br from-white/10 to-white/5 border border-white/20 p-5 flex items-center justify-center shadow-2xl transition-transform duration-500 hover:-translate-y-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="text-cyan-400">
+                    <path d="M20.2 6 3 11l-.9-2.4c-.3-1.1.3-2.2 1.3-2.5l13.5-4c1.1-.3 2.2.3 2.5 1.3Z"></path>
+                    <path d="m6.2 5.3 3.1 3.9"></path>
+                    <path d="m12.4 3.4 3.1 4"></path>
+                    <path d="M3 11h18v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"></path>
+                    <polygon points="10 15 15 17 10 19 10 15"></polygon>
+                  </svg>
+                </div>
+                {/* Glowing Pedestal */}
+                <div className="w-24 h-2.5 bg-cyan-400/40 blur-md rounded-full mt-3"></div>
+              </div>
+
+              {/* Step 4 Icon: Smartphone Reel */}
+              <div className="flex flex-col items-center">
+                <div className="size-28 rounded-3xl bg-gradient-to-br from-white/10 to-white/5 border border-white/20 p-5 flex items-center justify-center shadow-2xl transition-transform duration-500 hover:-translate-y-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="text-blue-400">
+                    <rect width="14" height="20" x="5" y="2" rx="2" ry="2"></rect>
+                    <path d="m10 11 5 3-5 3v-6Z"></path>
+                  </svg>
+                </div>
+                {/* Glowing Pedestal */}
+                <div className="w-24 h-2.5 bg-blue-400/40 blur-md rounded-full mt-3"></div>
+              </div>
+            </div>
+
+            {/* 4-Card Process Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
+              {/* Card 1 */}
+              <article className="group relative rounded-3xl border border-white/10 bg-white/5 p-8 transition-all duration-500 hover:border-primary/40 hover:bg-white/[0.08] hover:-translate-y-1 hover:shadow-[0_20px_40px_-15px_rgba(56,189,248,0.25)] flex flex-col justify-between overflow-hidden">
+                <div className="absolute bottom-4 right-4 text-6xl font-black opacity-[0.03] pointer-events-none group-hover:opacity-10 transition-opacity">
+                  01
+                </div>
+                <div>
+                  <div className="size-10 rounded-full border border-primary/40 bg-primary/10 flex items-center justify-center text-xs font-bold text-primary mb-6">
+                    01
+                  </div>
+                  <h3 className="font-heading text-xl font-bold tracking-tight text-white">
+                    Book your moment
+                  </h3>
+                  <p className="mt-3 text-sm leading-relaxed text-foreground/70 font-sans">
+                    Pick your date, location, and you&apos;re done.
+                  </p>
+                </div>
+                <div className="mt-8">
+                  <span className="inline-flex size-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-primary transition-all duration-300 group-hover:bg-primary group-hover:text-black">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M5 12h14"></path>
+                      <path d="m12 5 7 7-7 7"></path>
+                    </svg>
+                  </span>
+                </div>
+              </article>
+
+              {/* Card 2 */}
+              <article className="group relative rounded-3xl border border-white/10 bg-white/5 p-8 transition-all duration-500 hover:border-primary/40 hover:bg-white/[0.08] hover:-translate-y-1 hover:shadow-[0_20px_40px_-15px_rgba(56,189,248,0.25)] flex flex-col justify-between overflow-hidden">
+                <div className="absolute bottom-4 right-4 text-6xl font-black opacity-[0.03] pointer-events-none group-hover:opacity-10 transition-opacity">
+                  02
+                </div>
+                <div>
+                  <div className="size-10 rounded-full border border-primary/40 bg-primary/10 flex items-center justify-center text-xs font-bold text-primary mb-6">
+                    02
+                  </div>
+                  <h3 className="font-heading text-xl font-bold tracking-tight text-white">
+                    Get your creator
+                  </h3>
+                  <p className="mt-3 text-sm leading-relaxed text-foreground/70 font-sans">
+                    We assign the right creator for your shoot.
+                  </p>
+                </div>
+                <div className="mt-8">
+                  <span className="inline-flex size-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-primary transition-all duration-300 group-hover:bg-primary group-hover:text-black">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M5 12h14"></path>
+                      <path d="m12 5 7 7-7 7"></path>
+                    </svg>
+                  </span>
+                </div>
+              </article>
+
+              {/* Card 3 */}
+              <article className="group relative rounded-3xl border border-white/10 bg-white/5 p-8 transition-all duration-500 hover:border-primary/40 hover:bg-white/[0.08] hover:-translate-y-1 hover:shadow-[0_20px_40px_-15px_rgba(56,189,248,0.25)] flex flex-col justify-between overflow-hidden">
+                <div className="absolute bottom-4 right-4 text-6xl font-black opacity-[0.03] pointer-events-none group-hover:opacity-10 transition-opacity">
+                  03
+                </div>
+                <div>
+                  <div className="size-10 rounded-full border border-primary/40 bg-primary/10 flex items-center justify-center text-xs font-bold text-primary mb-6">
+                    03
+                  </div>
+                  <h3 className="font-heading text-xl font-bold tracking-tight text-white">
+                    Shoot &amp; create
+                  </h3>
+                  <p className="mt-3 text-sm leading-relaxed text-foreground/70 font-sans">
+                    Your moment gets captured and edited on the spot.
+                  </p>
+                </div>
+                <div className="mt-8">
+                  <span className="inline-flex size-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-primary transition-all duration-300 group-hover:bg-primary group-hover:text-black">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M5 12h14"></path>
+                      <path d="m12 5 7 7-7 7"></path>
+                    </svg>
+                  </span>
+                </div>
+              </article>
+
+              {/* Card 4 */}
+              <article className="group relative rounded-3xl border border-white/10 bg-white/5 p-8 transition-all duration-500 hover:border-primary/40 hover:bg-white/[0.08] hover:-translate-y-1 hover:shadow-[0_20px_40px_-15px_rgba(56,189,248,0.25)] flex flex-col justify-between overflow-hidden">
+                <div className="absolute bottom-4 right-4 text-6xl font-black opacity-[0.03] pointer-events-none group-hover:opacity-10 transition-opacity">
+                  04
+                </div>
+                <div>
+                  <div className="size-10 rounded-full border border-primary/40 bg-primary/10 flex items-center justify-center text-xs font-bold text-primary mb-6">
+                    04
+                  </div>
+                  <h3 className="font-heading text-xl font-bold tracking-tight text-white">
+                    Reel, ready
+                  </h3>
+                  <p className="mt-3 text-sm leading-relaxed text-foreground/70 font-sans">
+                    You get a ready-to-post reel, same day.
+                  </p>
+                </div>
+                <div className="mt-8">
+                  <span className="inline-flex size-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-primary transition-all duration-300 group-hover:bg-primary group-hover:text-black">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M5 12h14"></path>
+                      <path d="m12 5 7 7-7 7"></path>
+                    </svg>
+                  </span>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <Services />
 
       {/* Wedding & Event Special */}
@@ -334,30 +674,6 @@ export default function Home() {
       </section>
 
       <WhyChooseUs />
-
-      {/* Portfolio Section Placeholder */}
-      <section id="portfolio" className="py-32 bg-transparent text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-5xl md:text-7xl font-black tracking-tight mb-8 italic">Portfolio</h2>
-          <p className="text-xl md:text-2xl font-light opacity-60 mb-16 max-w-2xl mx-auto uppercase tracking-[0.2em]">Our Work Speaks for Itself</p>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-            {[1, 2, 3].map(i => (
-              <div key={i} className="group relative aspect-[4/5] bg-white/5 rounded-[40px] overflow-hidden border border-white/10">
-                <div className="absolute inset-0 flex items-center justify-center text-6xl opacity-30 group-hover:scale-125 transition-transform duration-700">🎬</div>
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-12 flex flex-col justify-end text-left">
-                  <span className="text-xs uppercase font-black tracking-widest mb-2">Category</span>
-                  <h3 className="text-2xl font-black uppercase">Project Title</h3>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <p className="border-t border-white/10 pt-16 opacity-40 text-sm font-bold uppercase tracking-widest">
-            📩 Contact us to view our latest reels and designs.
-          </p>
-        </div>
-      </section>
 
       {/* Contact Section */}
       <section id="contact" className="py-32 overflow-hidden relative">
