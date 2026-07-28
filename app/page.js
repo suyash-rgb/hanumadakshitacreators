@@ -72,6 +72,15 @@ export default function Home() {
               <div className="mt-8 flex flex-wrap items-center gap-6 border-t border-white/10 pt-6">
                 <div>
                   <p className="flex items-center gap-1 font-heading text-2xl md:text-3xl font-bold leading-none tracking-tight">
+                    2000<span className="text-primary">+</span>
+                  </p>
+                  <p className="mt-1 text-[9px] uppercase tracking-widest text-foreground/50 font-bold">
+                    Posters Created
+                  </p>
+                </div>
+
+                <div>
+                  <p className="flex items-center gap-1 font-heading text-2xl md:text-3xl font-bold leading-none tracking-tight">
                     500<span className="text-primary">+</span>
                   </p>
                   <p className="mt-1 text-[9px] uppercase tracking-widest text-foreground/50 font-bold">
@@ -89,14 +98,8 @@ export default function Home() {
                   </p>
                 </div>
 
-                <div>
-                  <p className="flex items-center gap-1 font-heading text-2xl md:text-3xl font-bold leading-none tracking-tight">
-                    10<span className="text-primary">+</span>
-                  </p>
-                  <p className="mt-1.5 text-[9px] uppercase tracking-widest text-foreground/50 font-bold">
-                    Trained Creators
-                  </p>
-                </div>
+                {/* 
+                 */}
               </div>
             </div>
 
