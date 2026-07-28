@@ -35,24 +35,17 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex-shrink-0 flex items-center gap-3">
-            <a href="/" className="flex items-center gap-3 group">
-              <div className="relative w-11 h-11 transition-transform duration-500 group-hover:scale-110">
+          <div className="flex-shrink-0 flex items-center">
+            <a href="/" className="flex items-center group">
+              <div className="relative w-44 sm:w-56 md:w-64 h-11 md:h-12 transition-transform duration-500 group-hover:scale-105">
                 <Image
-                  src="/logo.png"
+                  src="/textlogo.png"
                   alt="HanumaDakshita Creators Logo"
                   fill
-                  className="object-contain"
+                  className="object-contain object-left"
                   priority
                 />
               </div>
-              <span
-                className={`text-xl font-black tracking-tight transition-colors duration-300 ${
-                  scrolled ? 'text-secondary' : 'text-primary'
-                }`}
-              >
-                HanumaDakshita Creators
-              </span>
             </a>
           </div>
 

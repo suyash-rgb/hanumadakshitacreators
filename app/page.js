@@ -23,12 +23,6 @@ export default function Home() {
           <div className="flex flex-col items-center justify-between gap-8 lg:flex-row lg:items-start lg:gap-12 xl:gap-16">
             {/* Left Content (Headline, Subtitle, CTAs, Stats) */}
             <div className="w-full text-left lg:min-w-0 lg:flex-1 lg:pt-4">
-              {/* Eyebrow / Ticker Text */}
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-primary/20 bg-primary/5 text-primary text-xs font-black uppercase tracking-widest mb-4">
-                <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
-                <span>Trained Creators Only</span>
-              </div>
-
               {/* Stacked Heading in 2 Lines Only */}
               <h1 className="mt-0 font-heading text-[34px] sm:text-[44px] md:text-[60px] lg:text-[68px] xl:text-[76px] font-bold leading-[0.92] tracking-[-0.03em] text-foreground">
                 Your moments deserve a<br />
@@ -110,7 +104,7 @@ export default function Home() {
             <div className="relative mx-auto mt-2 h-[260px] w-full max-w-[280px] shrink-0 overflow-visible md:h-[310px] md:max-w-[340px] lg:mx-0 lg:mt-4 lg:h-[340px] lg:max-w-[360px]">
               {/* Blur Aura */}
               <div aria-hidden="true" className="pointer-events-none absolute inset-x-6 bottom-0 top-0 -z-10 rounded-[32px] bg-[radial-gradient(closest-side,var(--color-primary)/18%,transparent_72%)] blur-2xl"></div>
-              
+
               <div className="flex h-full items-end justify-center relative">
                 {/* Left Card: Overlap Decoration Reel */}
                 <div className="absolute left-4 bottom-3 h-[220px] w-[110px] md:h-[265px] md:w-[130px] lg:h-[295px] lg:w-[145px] rounded-[20px] md:rounded-[26px] overflow-hidden -rotate-[14deg] shadow-2xl border border-white/10 z-0 transform hover:rotate-0 hover:scale-105 transition-all duration-700 group">
@@ -128,7 +122,7 @@ export default function Home() {
                     {/* Interactive Play/Pause button */}
                     <div className="absolute inset-0 z-10 flex items-center justify-center bg-black/25 opacity-100 group-hover:bg-black/40 transition-colors">
                       <button className="grid size-8 place-items-center rounded-full bg-white/95 text-black shadow-lg">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" className="bi bi-play-fill"><path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" className="bi bi-play-fill"><path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" /></svg>
                       </button>
                     </div>
                   </div>
@@ -150,7 +144,7 @@ export default function Home() {
                     {/* Interactive Play/Pause button */}
                     <div className="absolute inset-0 z-10 flex items-center justify-center bg-black/25 opacity-100 group-hover:bg-black/40 transition-colors">
                       <button className="grid size-8 place-items-center rounded-full bg-white/95 text-black shadow-lg">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" className="bi bi-play-fill"><path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" className="bi bi-play-fill"><path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" /></svg>
                       </button>
                     </div>
                   </div>
