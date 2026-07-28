@@ -97,34 +97,46 @@ export default function Testimonials() {
               const isActive = diff === 0;
 
               // Determine exact positioning and rotation for fanning out
-              let transformStyles = "";
-              let zIndex = "z-0";
+              let rotateVal = "0deg";
+              let scaleVal = "1";
+              let zIndexVal = "0";
               let cardTheme = "";
+              let translateClass = "";
 
               if (diff === 0) {
                 // Active Card (Center Focus)
-                transformStyles = "translate-x-0 rotate-0 scale-105";
-                zIndex = "z-30";
+                rotateVal = "0deg";
+                scaleVal = "1.05";
+                zIndexVal = "30";
+                translateClass = "[--translate-x:0%]";
                 cardTheme = "opacity-100 bg-[#081f14] border-primary/50 text-white shadow-[0_20px_50px_rgba(56,189,248,0.3)]";
               } else if (diff === -1) {
                 // Left Side 1
-                transformStyles = "-translate-x-[50%] sm:-translate-x-[75%] -rotate-[6deg] scale-95";
-                zIndex = "z-20";
+                rotateVal = "-6deg";
+                scaleVal = "0.95";
+                zIndexVal = "20";
+                translateClass = "[--translate-x:-45%] sm:[--translate-x:-70%]";
                 cardTheme = "opacity-90 bg-white border-slate-200 text-slate-800 hover:opacity-100 cursor-pointer shadow-xl";
               } else if (diff === 1) {
                 // Right Side 1
-                transformStyles = "translate-x-[50%] sm:translate-x-[75%] rotate-[6deg] scale-95";
-                zIndex = "z-20";
+                rotateVal = "6deg";
+                scaleVal = "0.95";
+                zIndexVal = "20";
+                translateClass = "[--translate-x:45%] sm:[--translate-x:70%]";
                 cardTheme = "opacity-90 bg-white border-slate-200 text-slate-800 hover:opacity-100 cursor-pointer shadow-xl";
               } else if (diff === -2) {
                 // Left Side 2 (Outer)
-                transformStyles = "-translate-x-[90%] sm:-translate-x-[140%] -rotate-[12deg] scale-90";
-                zIndex = "z-10";
+                rotateVal = "-12deg";
+                scaleVal = "0.9";
+                zIndexVal = "10";
+                translateClass = "[--translate-x:-80%] sm:[--translate-x:-130%]";
                 cardTheme = "opacity-60 bg-white/95 border-slate-200 text-slate-800 hover:opacity-80 cursor-pointer shadow-md";
               } else if (diff === 2) {
                 // Right Side 2 (Outer)
-                transformStyles = "translate-x-[90%] sm:translate-x-[140%] rotate-[12deg] scale-90";
-                zIndex = "z-10";
+                rotateVal = "12deg";
+                scaleVal = "0.9";
+                zIndexVal = "10";
+                translateClass = "[--translate-x:80%] sm:[--translate-x:130%]";
                 cardTheme = "opacity-60 bg-white/95 border-slate-200 text-slate-800 hover:opacity-80 cursor-pointer shadow-md";
               }
 
@@ -132,9 +144,10 @@ export default function Testimonials() {
                 <div
                   key={idx}
                   onClick={() => !isActive && setActiveIndex(idx)}
-                  className={`absolute w-[240px] sm:w-[300px] p-6 sm:p-8 rounded-[28px] border transition-all duration-500 ease-out select-none flex flex-col justify-between h-[280px] sm:h-[330px] ${cardTheme} ${zIndex}`}
+                  className={`absolute w-[240px] sm:w-[300px] p-6 sm:p-8 rounded-[28px] border transition-all duration-500 ease-out select-none flex flex-col justify-between h-[280px] sm:h-[330px] ${translateClass} ${cardTheme}`}
                   style={{
-                    transform: transformStyles,
+                    transform: `translateX(var(--translate-x, 0%)) rotate(${rotateVal}) scale(${scaleVal})`,
+                    zIndex: zIndexVal,
                   }}
                 >
                   <div className="text-left">
@@ -188,9 +201,8 @@ export default function Testimonials() {
                 <button
                   key={idx}
                   onClick={() => setActiveIndex(idx)}
-                  className={`h-2.5 rounded-full transition-all duration-300 ${
-                    idx === activeIndex ? "w-8 bg-primary" : "w-2.5 bg-white/20"
-                  }`}
+                  className={`h-2.5 rounded-full transition-all duration-300 ${idx === activeIndex ? "w-8 bg-primary" : "w-2.5 bg-white/20"
+                    }`}
                   aria-label={`Go to review ${idx + 1}`}
                 />
               ))}
@@ -232,7 +244,7 @@ export default function Testimonials() {
             <div className="animate-float-1 group relative bg-black/40 border border-white/10 p-6 rounded-3xl shadow-[0_0_20px_rgba(56,189,248,0.05)] hover:border-primary/50 hover:shadow-[0_0_25px_rgba(56,189,248,0.15)] transition-all duration-300">
               {/* Dialogue Bubble tail */}
               <div className="absolute -bottom-2.5 left-8 w-5 h-5 bg-black/40 border-r border-b border-white/10 rotate-45 group-hover:border-primary/50 transition-colors"></div>
-              
+
               <div className="flex gap-0.5 text-primary text-xs mb-3">★ ★ ★ ★ ★</div>
               <p className="text-sm leading-relaxed text-white/90 italic">
                 &ldquo;Absolutely stunned by the logo delivery. Took only 12 hours to deliver vector files! 🙌&rdquo;
@@ -247,7 +259,7 @@ export default function Testimonials() {
             <div className="animate-float-2 group relative bg-black/40 border border-white/10 p-6 rounded-3xl shadow-[0_0_20px_rgba(56,189,248,0.05)] hover:border-primary/50 hover:shadow-[0_0_25px_rgba(56,189,248,0.15)] transition-all duration-300 mt-6 md:mt-0">
               {/* Dialogue Bubble tail */}
               <div className="absolute -bottom-2.5 left-8 w-5 h-5 bg-black/40 border-r border-b border-white/10 rotate-45 group-hover:border-primary/50 transition-colors"></div>
-              
+
               <div className="flex gap-0.5 text-primary text-xs mb-3">★ ★ ★ ★ ★</div>
               <p className="text-sm leading-relaxed text-white/90 italic">
                 &ldquo;Our Instagram campaign creatives look so premium. Our CTR rose from 1.5% to 4.2%! 🚀&rdquo;
@@ -262,7 +274,7 @@ export default function Testimonials() {
             <div className="animate-float-3 group relative bg-black/40 border border-white/10 p-6 rounded-3xl shadow-[0_0_20px_rgba(56,189,248,0.05)] hover:border-primary/50 hover:shadow-[0_0_25px_rgba(56,189,248,0.15)] transition-all duration-300 mt-6 lg:mt-0">
               {/* Dialogue Bubble tail */}
               <div className="absolute -bottom-2.5 left-8 w-5 h-5 bg-black/40 border-r border-b border-white/10 rotate-45 group-hover:border-primary/50 transition-colors"></div>
-              
+
               <div className="flex gap-0.5 text-primary text-xs mb-3">★ ★ ★ ★ ★</div>
               <p className="text-sm leading-relaxed text-white/90 italic">
                 &ldquo;The wedding reel hit 210k views overnight! Highly recommend their video crew.&rdquo;
@@ -277,7 +289,7 @@ export default function Testimonials() {
             <div className="animate-float-4 group relative bg-black/40 border border-white/10 p-6 rounded-3xl shadow-[0_0_20px_rgba(56,189,248,0.05)] hover:border-primary/50 hover:shadow-[0_0_25px_rgba(56,189,248,0.15)] transition-all duration-300 mt-6 lg:mt-0">
               {/* Dialogue Bubble tail */}
               <div className="absolute -bottom-2.5 left-8 w-5 h-5 bg-black/40 border-r border-b border-white/10 rotate-45 group-hover:border-primary/50 transition-colors"></div>
-              
+
               <div className="flex gap-0.5 text-primary text-xs mb-3">★ ★ ★ ★ ★</div>
               <p className="text-sm leading-relaxed text-white/90 italic">
                 &ldquo;Quick, easy booking. Their creator showed up on time and delivered the reel same day.&rdquo;
